@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body class="page-body">
+    <header class="page-header">
+      <a class="page-header__mascot-icon" href="index.html">
+        <img src="https://via.placeholder.com/50x50" height="#" width="#" alt="Талисман Cat Energy">
+      </a>
+      <a class="page-header__logo site-logo" href="index.html">
+        <img src="https://via.placeholder.com/100x20" height="#" width="#" alt="Cat Energy">
+      </a>
+      <nav class="main-nav">
+        <button type="button" class="main-nav__toggle" aria-label="Открыть меню">
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="pick-your-diet__header">
+        Подбор программы
+      </h1>
+      <section class="pick-your-diet">
+        <h2 class="visually-hidden">
+          Анкета
+        </h2>
+        <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="pick-your-diet__fieldset">
+            <div class="pick-your-diet__item">
+              <label class="pick-your-diet__label" for="name">
+                Имя:<sup>*</sup>
+              </label>
+              <input class="pick-your-diet__text-input" type="text" id="name" name="name" value="Барсик" required>
+            </div>
+            <div class="pick-your-diet__item">
+              <label class="pick-your-diet__label" for="weight">
+                Вес (кг):<sup>*</sup>
+              </label>
+              <input class="pick-your-diet__text-input" type="number" id="weight" name="weight" value="7" required>
+            </div>
+            <div class="pick-your-diet__item">
+              <label class="pick-your-diet__label" for="age">
+                Возраст(лет):
+              </label>
+              <input class="pick-your-diet__text-input" type="number" id="age" name="age" value="7">
+            </div>
+          </fieldset>
+          <fieldset class="pick-your-diet__fieldset">
+            <div class="pick-your-diet__item">
+              <input class="pick-your-diet__radio-input" id="goal--weight-loss" type="radio" name="goal" value="weight-loss" checked>
+              <label class="pick-your-diet__label" for="goal--weight-loss">
+                Похудение
+              </label>
+            </div>
+            <div class="pick-your-diet__item">
+              <input class="pick-your-diet__radio-input" id="goal--weight-gain" type="radio" name="goal" value="weight-gain">
+              <label class="pick-your-diet__label" for="goal--weight-gain">
+                Набор массы
+              </label>
+            </div>
+            <div class="pick-your-diet__item">
+              <input class="pick-your-diet__radio-input" id="goal--dont-know" type="radio" name="goal" value="dont-know">
+              <label class="pick-your-diet__label" for="goal--dont-know">
+                Не знаю (нужен ваш совет)
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="pick-your-diet__fieldset">
+            <legend class="pick-your-diet__legend">
+              Контактные данные (владельца кота)
+            </legend>
+            <div class="pick-your-diet__item">
+              <label for="email" class="pick-your-diet__label">
+                E-mail:<sup>*</sup>
+              </label>
+              <input class="pick-your-diet__text-input" id="email" name="email" type="email" value="kuklachev@gmail.com" required>
+            </div>
+            <div class="pick-your-diet__item">
+              <label for="phone" class="pick-your-diet__label">
+                Телефон:<sup>*</sup>
+              </label>
+              <input class="pick-your-diet__text-input" id="phone" name="phone" type="tel" value="8 (960) 900-60-90" required>
+            </div>
+          </fieldset>
+          <fieldset class="pick-your-diet__fieldset">
+            <legend class="pick-your-diet__legend">
+              Комментарий
+            </legend>
+            <textarea class="pick-your-diet__textarea" name="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="pick-your-diet__fieldset">
+            <legend class="pick-your-diet__legend">
+              Дополнительно
+            </legend>
+            <div class="pick-your-diet__item">
+              <input class="pick-your-diet__checkbox" id="sweetener" type="checkbox" name="additionals" value="sweetener" checked>
+              <label class="pick-your-diet__label" for="sweetener">Сахарозаменитель</label>
+            </div>
+            <div class="pick-your-diet__item">
+              <input class="pick-your-diet__checkbox" id="drinking-water" type="checkbox" name="additionals" value="drinking-water">
+              <label class="pick-your-diet__label" for="drinking-water">Питьевая вода</label>
+            </div>
+            <div class="pick-your-diet__item">
+              <input class="pick-your-diet__checkbox" id="milk" type="checkbox" name="additionals" value="milk">
+              <label class="pick-your-diet__label" for="milk">Молоко</label>
+            </div>
+            <div class="pick-your-diet__item">
+              <input class="pick-your-diet__checkbox" id="vitamins" type="checkbox" name="additionals" value="vitamins">
+              <label class="pick-your-diet__label" for="vitamins">Витамины</label>
+            </div>
+          </fieldset>
+          <button type="submit" class="button">Отправить заявку</button>
+          <p class="pick-your-diet__footnote"><sup>*</sup> &mdash; Обязательные поля</p>
+        </form>
+      </section>
+      <section class="contact-us">
+        <div class="contact-us__wrapper">
+          <header class="contact-us__header">
+            <h2 class="contact-us__heading">
+              Приглашаем к сотрудничеству дилеров!
+            </h2>
+            <address class="contact-us__address">
+              <span class="no-wrap">ул. Большая Конюшенная,</span><span class="no-wrap">д. 19/8</span> <span class="no-wrap">Санкт-Петербург</span>
+            </address>
+          </header>
+          <div class="contact-us__map-static">
+            <a class="contact-us__open-map" href="#">
+              <img src="https://via.placeholder.com/320x362" width="320" height="362" alt="Наше местоположение на карте">
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__logo-wrapper">
+        <a class="page-footer__logo site-logo" href="index.html">
+          <img src="https://via.placeholder.com/120x25" height="#" width="#" alt="Cat Energy">
+        </a>
+      </div>
+      <div class="page-footer__socials-wrapper">
+        <ul class="page-footer__socials-list socials-list">
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--vk" href="#" aria-label="Вконтакте"></a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--instagram" href="#" aria-label="Инстаграм"></a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--fb" href="#" aria-label="Фейсбук"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright-wrapper">
+        <a class="page-footer__copyright-name" href="https://htmlacademy.ru/">HTML Academy</a>
+        <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/"></a>
+      </div>
+    </footer>
+  </body>
+</html>
