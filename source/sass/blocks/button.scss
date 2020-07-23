@@ -1,13 +1,9 @@
 .button {
   display: block;
 
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 129%;
+  @include uppercase-heading (14px, 129%);
 
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
 
   background-color: var(--special-color);

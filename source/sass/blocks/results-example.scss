@@ -16,10 +16,7 @@
   border: 1px solid var(--border-secondary-color);
   border-radius: 3px;
 
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 100%;
+  @include uppercase-heading(24px);
 
   text-align: center;
   color: var(--heading-main-color);
@@ -34,15 +31,11 @@
 }
 
 .results-example__cost {
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 143%;
+  @include uppercase-heading(14px, 143%);
 
   color: var(--heading-main-color);
 
   text-align: center;
-  text-transform: uppercase;
 }
 
 .results-example__figure {}
@@ -54,10 +47,7 @@
 .results-example__figcaption {}
 
 .results-example__label {
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 125%;
+  @include uppercase-heading(16px, 125%);
 }
 
 .results-example__toggle-list {

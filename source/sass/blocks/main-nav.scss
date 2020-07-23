@@ -1,10 +1,7 @@
 .main-nav {
-  font-family: $heading-font-stack;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
+  @include uppercase-heading (20px);
 
-  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .main-nav__wrapper {}

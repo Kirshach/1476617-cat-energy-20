@@ -7,23 +7,16 @@
 .promo__wrapper {  }
 
 .promo__heading {
-  font-family: $heading-font-stack;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 100%;
+  @include uppercase-heading(36px);
 
   color: var(--text-alt-color);
   text-align: center;
 }
 
 .promo__slogan {
-  font-family: $heading-font-stack;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 100%;
+  @include uppercase-heading(14px);
 
   color: var(--text-alt-color);
-  text-transform: uppercase;
 }
 
 .promo__link {

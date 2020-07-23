@@ -20,12 +20,7 @@
 }
 
 .categories__heading {
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 154%;
-
-  text-transform: uppercase;
+  @include uppercase-heading(24px, 154%);
 }
 .categories__description {
   font-family: $text-font-stack;
@@ -35,12 +30,8 @@
 }
 
 .categories__link {
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 100%;
+  @include uppercase-heading(16px);
 
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--heading-main-color);

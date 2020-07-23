@@ -1,13 +1,9 @@
 .show-more {}
 
 .show-more__heading {
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 125%;
+  @include uppercase-heading(16px, 125%);
 
   text-align: center;
-  text-transform: uppercase;
   color: var(--heading-main-color);
 }
 
