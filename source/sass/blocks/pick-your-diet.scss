@@ -1,0 +1,45 @@
+.pick-your-diet {}
+
+.pick-your-diet__heading {}
+
+.pick-your-diet__description {
+  font-family: $heading-font-stack;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 129%;
+
+  text-transform: uppercase;
+  color: var(--heading-main-color);
+}
+
+.pick-your-diet__form {}
+
+.pick-your-diet__fieldset {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.pick-your-diet__legend {}
+
+.pick-your-diet__item {}
+
+.pick-your-diet__label {
+  font-family: $heading-font-stack;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 112%;
+
+  text-transform: uppercase;
+}
+
+.pick-your-diet__text-input {}
+
+.pick-your-diet__checkbox {}
+
+.pick-your-diet__radio-input {}
+
+.pick-your-diet__textarea {}
+
+.pick-your-diet__footnote {}

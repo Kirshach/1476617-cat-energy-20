@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -12,26 +13,25 @@
       <a class="page-header__logo site-logo" href="index.html">
         <img src="https://via.placeholder.com/100x20" height="#" width="#" alt="Cat Energy">
       </a>
+      <button type="button" class="page-header__hamburger-toggler" aria-label="Открыть меню"></button>
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle" aria-label="Открыть меню">
-        </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#">Каталог продукции</a>
+              <a class="site-list__link">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#">Подбор программы</a>
+              <a class="site-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__heading">
+      <h1 class="page-main__heading section-heading">
         Каталог продукции
       </h1>
       <section class="catalog">
@@ -259,14 +259,14 @@
             </li>
           </ul>
         </div>
-        <div class="catalog__show-more">
-          <p>Показать еще 100500 товаров</p>
-          <p>На самом деле вкусов гораздо больше!</p>
-          <a href="#" class="button button--alt-style">Показать все</a>
+        <div class="catalog__show-more show-more">
+          <p class="show-more__heading">Показать еще 100500 товаров</p>
+          <p class="show-more__paragraph">На самом деле вкусов гораздо больше!</p>
+          <a href="#" class="show-more__button button button--alt-style">Показать все</a>
         </div>
       </section>
       <section class="related-products">
-        <h2 class="related-products__heading">Дополнительные товары</h2>
+        <h2 class="related-products__heading section-heading--second-level">Дополнительные товары</h2>
         <div class="related-products__wrapper">
           <ul class="related-products__list">
             <li class="related-products__item">
@@ -320,11 +320,9 @@
           </ul>
         </div>
         <div class="special-offer">
-          <div class="special-offer__internal-container">
-            <p class="special-offer__offer-text">
-              Закажите все и получите чехол для кота в подарок!
-            </p>
-          </div>
+          <p class="special-offer__offer-text">
+            Закажите все и получите чехол для кота в подарок!
+          </p>
         </div>
       </section>
       <section class="contact-us">

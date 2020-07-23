@@ -1,0 +1,31 @@
+.promo {
+  background: var(--special-color) url("../img/index-background-mobile@1x.jpg") no-repeat center top;
+
+  text-align: center;
+}
+
+.promo__wrapper {  }
+
+.promo__heading {
+  font-family: $heading-font-stack;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+
+  color: var(--text-alt-color);
+  text-align: center;
+}
+
+.promo__slogan {
+  font-family: $heading-font-stack;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+
+  color: var(--text-alt-color);
+  text-transform: uppercase;
+}
+
+.promo__link {
+  text-decoration: none;
+}

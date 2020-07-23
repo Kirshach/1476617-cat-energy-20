@@ -1,1 +1,53 @@
-// Начните писать стили здесь
+@import "_at-rules.scss";
+@import "_custom-properties.scss";
+@import "_global-variables.scss";
+@import "_global-mixins.scss";
+
+
+
+
+
+///////////////////////////////////
+//       Глобальные блоки       ///
+///////////////////////////////////
+
+@import "blocks/page-body.scss";
+
+// Крупные структурные блоки
+@import "blocks/catalog.scss";
+@import "blocks/contact-us.scss";
+@import "blocks/how-it-works.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
+@import "blocks/pick-your-diet.scss";
+@import "blocks/related-products.scss";
+@import "blocks/results-example.scss";
+@import "blocks/site-list.scss";
+@import "blocks/special-offer.scss";
+
+// Вложенные структурные блоки
+@import "blocks/product-card.scss";
+@import "blocks/show-more.scss";
+@import "blocks/site-list.scss";
+@import "blocks/socials-list.scss";
+
+// Вложенные элементарные блоки
+@import "blocks/button.scss";
+@import "blocks/no-wrap.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/section-heading.scss";
+
+
+
+
+
+///////////////////////////////////
+//       Уникальные блоки       ///
+///////////////////////////////////
+
+// Блоки главной страницы
+@import "blocks/categories.scss";
+@import "blocks/promo.scss";
+

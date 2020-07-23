@@ -1,0 +1,31 @@
+.how-it-works {}
+
+.how-it-works__heading {}
+
+.how-it-works__wrapper {}
+
+.how-it-works__list {
+  @include default-list-style;
+}
+
+.how-it-works__item {
+
+
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  &--healthy{
+    background-image: url(../img/how-it-works-healthy.svg);
+  }
+  &--fast {
+    background-image: url(../img/how-it-works-fast.svg);
+  }
+  &--replace{
+    background-image: url(../img/how-it-works-replace.svg);
+  }
+  &--transform{
+    background-image: url(../img/how-it-works-transform.svg);
+  }
+}
+
+.how-it-works__description {}

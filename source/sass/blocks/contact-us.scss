@@ -1,0 +1,30 @@
+.contact-us {
+  background-color: var(--bg-accented-main-color);
+}
+
+.contact-us__wrapper {}
+
+.contact-us__header {}
+
+.contact-us__heading {
+    font-family: $heading-font-stack;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 112%;
+
+    text-transform: uppercase;
+
+    color: var(--heading-main-color);
+}
+
+.contact-us__address {
+    font-family: $text-font-stack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.contact-us__map-static {}
+
+.contact-us__open-map {}

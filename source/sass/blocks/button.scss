@@ -1,0 +1,20 @@
+.button {
+  display: block;
+
+  font-family: $heading-font-stack;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 129%;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: var(--special-color);
+  color: var(--text-alt-color);
+
+  &--alt-style {
+    background-color: var(--bg-accented-main-color);
+    color: var(--text-main-color);
+  }
+}

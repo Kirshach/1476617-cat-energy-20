@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.page-body {
+  font-family: $text-font-stack;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  background-color: var(--bg-main-color);
+  color: var(--text-main-color);
+}
