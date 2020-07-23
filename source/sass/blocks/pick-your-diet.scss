@@ -3,12 +3,8 @@
 .pick-your-diet__heading {}
 
 .pick-your-diet__description {
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 129%;
+  @include uppercase-heading(14px, 129%);
 
-  text-transform: uppercase;
   color: var(--heading-main-color);
 }
 
@@ -25,13 +21,7 @@
 .pick-your-diet__item {}
 
 .pick-your-diet__label {
-  font-family: $heading-font-stack;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 112%;
-
-  text-transform: uppercase;
+  @include uppercase-heading(16px, 112%);
 }
 
 .pick-your-diet__text-input {}

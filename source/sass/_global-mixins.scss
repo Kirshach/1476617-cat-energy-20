@@ -2,3 +2,13 @@
   list-style: none;
   padding-left: 0;
 }
+
+@mixin uppercase-heading ($font-size: 1rem, $line-height: 100%) {
+  font-family: $heading-font-stack;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size;
+  line-height: $line-height;
+
+  text-transform: uppercase;
+}
