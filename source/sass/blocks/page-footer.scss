@@ -1,0 +1,25 @@
+.page-footer {
+  background-color: var(--bg-accented-main-color);
+}
+
+.page-footer__logo-wrapper {}
+
+.page-footer__logo {}
+
+.page-footer__socials-wrapper {}
+
+.page-footer__socials-list {}
+
+.page-footer__copyright-wrapper {}
+
+.page-footer__copyright-name {
+  display: block;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 112%;
+
+  text-decoration: none;
+  color: var(--text-main-color);
+}
+
+.page-footer__copyright-logo {}

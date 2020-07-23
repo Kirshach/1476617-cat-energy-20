@@ -1,0 +1,16 @@
+.section-heading {
+  font-family: $heading-font-stack;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 100%;
+
+  color: var(--heading-main-color);
+
+  &--second-level {
+    font-family: $heading-font-stack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 100%;
+  }
+}

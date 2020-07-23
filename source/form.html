@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -12,9 +13,8 @@
       <a class="page-header__logo site-logo" href="index.html">
         <img src="https://via.placeholder.com/100x20" height="#" width="#" alt="Cat Energy">
       </a>
+      <button type="button" class="page-header__hamburger-toggler" aria-label="Открыть меню"></button>
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle" aria-label="Открыть меню">
-        </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -24,22 +24,19 @@
               <a class="site-list__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#">Подбор программы</a>
+              <a class="site-list__link">Подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="pick-your-diet__header">
-        Подбор программы
-      </h1>
       <section class="pick-your-diet">
-        <h2 class="visually-hidden">
-          Анкета
-        </h2>
-        <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
+        <h1 class="pick-your-diet__heading section-heading">
+          Подбор программы
+        </h1>
+        <p class="pick-your-diet__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form class="pick-your-diet__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="pick-your-diet__fieldset">
             <div class="pick-your-diet__item">
               <label class="pick-your-diet__label" for="name">

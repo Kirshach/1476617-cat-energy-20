@@ -1,0 +1,19 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+
+  @include default-list-style;
+}
+
+.site-list__item {
+  border-top: 1px solid var(--border-main-color);
+
+  &:last-of-type {
+    border-bottom: 1px solid var(--border-main-color);
+  }
+}
+
+.site-list__link {
+  color: inherit;
+  text-decoration: none;
+}

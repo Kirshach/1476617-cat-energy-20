@@ -1,0 +1,11 @@
+.catalog {}
+
+.catalog__wrapper {}
+
+.catalog__list {
+  @include default-list-style;
+}
+
+.catalog__item {}
+
+.catalog__show-more {}

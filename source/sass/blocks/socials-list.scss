@@ -1,0 +1,23 @@
+.socials-list {
+  @include default-list-style;
+}
+
+.socials-list__item {}
+
+.socials-list__link {
+  display: block;
+
+  height: 25px;
+  width: 25px;
+
+  &--vk {
+    background: url(../img/icon-vk.svg) no-repeat 0 0;
+  }
+  &--instagram {
+    background: url(../img/icon-insta.svg) no-repeat 0 0;
+  }
+  &--fb {
+    background: url(../img/icon-fb.svg) no-repeat 0 0;
+  }
+
+}

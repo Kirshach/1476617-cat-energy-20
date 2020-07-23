@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -12,9 +13,8 @@
       <a class="page-header__logo site-logo">
         <img src="https://via.placeholder.com/100x20" height="#" width="#" alt="Cat Energy">
       </a>
+      <button type="button" class="page-header__hamburger-toggler" aria-label="Открыть меню"></button>
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle" aria-label="Открыть меню">
-        </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -24,7 +24,7 @@
               <a class="site-list__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#">Подбор программы</a>
+              <a class="site-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -63,7 +63,7 @@
         </div>
       </section>
       <section class="how-it-works">
-        <h2 class="how-it-works__heading">Как это работает</h2>
+        <h2 class="how-it-works__heading section-heading">Как это работает</h2>
         <div class="how-it-works__wrapper">
           <ul class="how-it-works__list">
             <li class="how-it-works__item how-it-works__item--healthy">
@@ -98,8 +98,8 @@
       </section>
       <section class="results-example">
         <div class="results-example__wrapper">
-          <h2 class="results-example__heading">Живой пример</h2>
-          <p class="results-example__description">Борис
+          <h2 class="results-example__heading section-heading">Живой пример</h2>
+          <p class="results-example__text-block">Борис
           сбросил 5 кг за 2 месяца, просто заменив свой
           обычный корм на Cat Energy Slim. Отличный
           результат без изнуряющих тренировок!

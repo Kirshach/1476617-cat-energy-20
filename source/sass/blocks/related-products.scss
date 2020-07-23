@@ -1,0 +1,29 @@
+.related-products {}
+
+.related-products__wrapper {}
+
+.related-products__heading {}
+
+.related-products__list {
+  @include default-list-style;
+}
+
+.related-products__item {
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.related-products__name {
+  font-family: $heading-font-stack;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+
+  text-transform: uppercase;
+
+  color: var(--heading-secondary-color);
+}
+
+.related-products__quantity {}
+
+.related-products__price {}
