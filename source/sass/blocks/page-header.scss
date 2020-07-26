@@ -1,9 +1,63 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  padding: 0 var(--page-padding);
+
   color: var(--heading-main-color);
+  background: transparent;
 }
 
-.page-header__mascot-icon {}
+// .page-header__mascot-icon {}
 
-.page-header__logo site-logo {}
+// .page-header__logo {}
 
-.page-header__hamburger-toggler {}
+.page-header__hamburger-toggler {
+  width: 40px;
+  height: 40px;
+
+  background: url("../img/icon-mobile-menu.svg") no-repeat 8px 12px;
+  border: none;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-header__hamburger-toggler {
+    display: none;
+  }
+
+  .page-header__wrapper {
+    width: auto;
+  }
+}
+
+
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
+
+
+@media (min-width: $desktop-width) {
+  .page-header__main-page-header {
+    color: var(--text-alt-color);
+  }
+}

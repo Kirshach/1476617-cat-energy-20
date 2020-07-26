@@ -1,2 +1,8 @@
+// Брейкпойнты медиа-среды
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+// Шрифты. используемые на странице
 $text-font-stack: var(--main-font-family), sans-serif;
-$heading-font-stack: var(--heading-font-family), 'Impact', sans-serif;
+$heading-font-stack: var(--heading-font-family), "Impact", sans-serif;

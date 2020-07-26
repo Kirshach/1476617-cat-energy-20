@@ -1,6 +1,6 @@
-.pick-your-diet {}
+// .pick-your-diet {}
 
-.pick-your-diet__heading {}
+// .pick-your-diet__heading {}
 
 .pick-your-diet__description {
   @include uppercase-heading(14px, 129%);
@@ -8,7 +8,7 @@
   color: var(--heading-main-color);
 }
 
-.pick-your-diet__form {}
+// .pick-your-diet__form {}
 
 .pick-your-diet__fieldset {
   padding: 0;
@@ -16,20 +16,20 @@
   margin: 0;
 }
 
-.pick-your-diet__legend {}
+// .pick-your-diet__legend {}
 
-.pick-your-diet__item {}
+// .pick-your-diet__item {}
 
 .pick-your-diet__label {
   @include uppercase-heading(16px, 112%);
 }
 
-.pick-your-diet__text-input {}
+// .pick-your-diet__text-input {}
 
-.pick-your-diet__checkbox {}
+// .pick-your-diet__checkbox {}
 
-.pick-your-diet__radio-input {}
+// .pick-your-diet__radio-input {}
 
-.pick-your-diet__textarea {}
+// .pick-your-diet__textarea {}
 
-.pick-your-diet__footnote {}
+// .pick-your-diet__footnote {}

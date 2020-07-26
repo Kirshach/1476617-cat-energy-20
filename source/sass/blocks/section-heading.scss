@@ -1,9 +1,16 @@
 .section-heading {
-  @include uppercase-heading(36px);
+  font-family: $heading-font-stack;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 100%;
 
   color: var(--heading-main-color);
 
   &--second-level {
     font-size: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
   }
 }

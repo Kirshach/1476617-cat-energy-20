@@ -1,10 +1,15 @@
 .contact-us {
+  margin: 0 var(--page-padding);
+
   background-color: var(--bg-accented-main-color);
 }
 
-.contact-us__wrapper {}
+// .contact-us__wrapper {}
 
-.contact-us__header {}
+.contact-us__header {
+  display: flex;
+  justify-content: space-between;
+}
 
 .contact-us__heading {
   @include uppercase-heading(16px, 112%);
@@ -20,6 +25,23 @@
   line-height: 20px;
 }
 
-.contact-us__map-static {}
+// .contact-us__map-static {}
 
-.contact-us__open-map {}
+// .contact-us__open-map {}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
+
+
+@media (min-width: $desktop-width) {
+  .contact-us__header {
+    position: absolute;
+  }
+}

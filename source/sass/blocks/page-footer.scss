@@ -1,16 +1,25 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 var(--page-padding);
+
   background-color: var(--bg-accented-main-color);
 }
 
-.page-footer__logo-wrapper {}
+// .page-footer__logo-wrapper {}
 
-.page-footer__logo {}
+// .page-footer__logo {}
 
-.page-footer__socials-wrapper {}
+// .page-footer__socials-wrapper {}
 
-.page-footer__socials-list {}
+.page-footer__socials-list {
+  display: flex;
+}
 
-.page-footer__copyright-wrapper {}
+// .page-footer__copyright-wrapper {}
 
 .page-footer__copyright-name {
   display: block;
@@ -22,4 +31,16 @@
   color: var(--text-main-color);
 }
 
-.page-footer__copyright-logo {}
+// .page-footer__copyright-logo {}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    flex-direction: row;
+  }
+}

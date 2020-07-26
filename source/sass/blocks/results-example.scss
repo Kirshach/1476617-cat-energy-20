@@ -1,16 +1,23 @@
-.results-example {
+// .results-example {}
+
+.results-example__wrapper {
+  display: grid;
+
+  margin: 0 var(--page-padding);
+
   background-color: var(--bg-accented-secondary-color);
 }
 
-.results-example__wrapper {}
+// .results-example__heading {}
 
-.results-example__heading {}
+// .results-example__text-block {}
 
-.results-example__text-block {}
+.results-example__list {
+  display: flex;
+  flex-direction: column;
+}
 
-.results-example__list {}
-
-.results-example__item {}
+// .results-example__item {}
 
 .results-example__description {
   border: 1px solid var(--border-secondary-color);
@@ -38,13 +45,13 @@
   text-align: center;
 }
 
-.results-example__figure {}
+// .results-example__figure {}
 
-.results-example__before-img {}
+// .results-example__before-img {}
 
-.results-example__after-img {}
+// .results-example__after-img {}
 
-.results-example__figcaption {}
+// .results-example__figcaption {}
 
 .results-example__label {
   @include uppercase-heading(16px, 125%);
@@ -54,6 +61,65 @@
   @include default-list-style;
 }
 
-.results-example__toggle-item {}
+// .results-example__toggle-item {}
 
-.results-example__toggle-input {}
+// .results-example__toggle-input {}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+
+@media (min-width: $tablet-width) {
+  .results-example__wrapper {
+    grid-template-columns: 60% 40%;
+  }
+
+  .results-example__heading {
+    grid-column: 1 / -1;
+  }
+
+  .results-example__text-block {
+    grid-column: 1 / -1;
+  }
+
+  .results-example__list {
+    flex-direction: row;
+  }
+}
+
+
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
+
+
+@media (min-width: $desktop-width) {
+  .results-example__wrapper {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, min-content);
+  }
+
+  .results-example__heading {
+    grid-column: 1 / 2;
+  }
+
+  .results-example__text-block {
+    grid-column: 1 / 2;
+  }
+
+  .results-example__list {
+    flex-direction: row;
+    grid-column: 1 / 2;
+  }
+
+  .results-example__cost {
+    grid-column: 1 / 2;
+  }
+
+  .results-example__figure {
+    grid-row: 1 / -1;
+    grid-column: 2 / 3;
+  }
+}
