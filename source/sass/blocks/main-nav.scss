@@ -1,26 +1,16 @@
-.main-nav {
+// .main-nav {}
+
+.main-nav__wrapper {
   @include uppercase-heading (20px);
   font-weight: 500;
 
-  @media (min-width: $tablet-width) {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
-  }
+  width: 100%;
 }
-
-// .main-nav__wrapper {}
 
 .main-nav__list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
-  outline: 2px solid blue;
-
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-  }
 }
 
 .main-nav .site-list__link {
@@ -31,4 +21,21 @@
   padding-bottom: 24px;
 
   text-align: center;
+}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+@media (min-width: $tablet-width) {
+  .main-nav__wrapper {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+
+  .main-nav__list {
+    flex-direction: row;
+  }
 }

@@ -1,13 +1,12 @@
-.how-it-works {
-  padding: 0 var(--page-padding);
-}
+// .how-it-works {}
 
 .how-it-works__heading {
-  margin: 0;
-  margin-bottom: 38px;
+  margin: 0 var(--page-padding) 38px;
 }
 
-// .how-it-works__wrapper {}
+.how-it-works__wrapper {
+  margin: 0 var(--page-padding);
+}
 
 .how-it-works__list {
   @include default-list-style;

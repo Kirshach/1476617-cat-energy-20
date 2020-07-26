@@ -1,6 +1,15 @@
-.page-header {
+// .page-header {}
+
+// .page-header__mascot-icon {}
+
+// .page-header__logo {}
+
+.page-header__wrapper {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
   position: relative;
 
   padding: 0 var(--page-padding);
@@ -8,10 +17,6 @@
   color: var(--heading-main-color);
   background: transparent;
 }
-
-// .page-header__mascot-icon {}
-
-// .page-header__logo {}
 
 .page-header__hamburger-toggler {
   width: 40px;
@@ -21,14 +26,9 @@
   border: none;
 }
 
-.page-header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+.page-header__main-nav {
   width: 100%;
 }
-
 
 ////////////////////////////////////
 //     Раскладка на планшете     ///
@@ -39,6 +39,10 @@
   .page-header {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .page-header__main-nav {
+    width: auto;
   }
 
   .page-header__hamburger-toggler {
@@ -57,7 +61,7 @@
 
 
 @media (min-width: $desktop-width) {
-  .page-header__main-page-header {
+  .page-header__main-page-wrapper {
     color: var(--text-alt-color);
   }
 }

@@ -1,6 +1,8 @@
 // .categories {}
 
-// .categories__wrapper {}
+.categories__wrapper {
+  margin: 0 var(--page-padding);
+}
 
 .categories__list {
   @include default-list-style;
@@ -9,8 +11,6 @@
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-
-  margin: 0 var(--page-padding);
 }
 
 .categories__item {

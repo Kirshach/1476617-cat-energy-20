@@ -1,4 +1,4 @@
-.promo {
+.promo__wrapper {
   padding: 27px var(--page-padding) 0 var(--page-padding);
 
   text-align: center;
@@ -43,7 +43,7 @@
 
 
 @media (min-width: $tablet-width) {
-  .promo {
+  .promo__wrapper {
     min-height: 810px;
     background: var(--bg-main-color);
     color: var(--text-main-color);
@@ -79,7 +79,7 @@
 
 
 @media (min-width: $desktop-width) {
-  .promo {
+  .promo__wrapper {
     // Здесь располагаются хитрые манипуляции, "подкладывающие" промо-блок под хэдер
     position: relative;
     z-index: -1;
