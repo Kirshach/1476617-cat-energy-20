@@ -1,4 +1,5 @@
 :root {
+  // Глобальные цвета
   --special-color: #68b738;
 
   --text-main-color: #444444;
@@ -14,6 +15,25 @@
   --border-main-color: #f6f6f6;
   --border-secondary-color: #cdcdcd;
 
-  --main-font-family: 'Arial';
-  --heading-font-family: 'Oswald';
+
+  // Уникальные цвета блоков
+  --promo-mobile-bg-color: #63a73a;
+  --promo-desktop-bg-color: #65a93c;
+
+
+  // Шрифты
+  --main-font-family: "Arial";
+  --heading-font-family: "Oswald";
+
+
+  // Внутренние паддинги страницы
+  --page-padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    --page-padding: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    --page-padding: 110px;
+  }
 }

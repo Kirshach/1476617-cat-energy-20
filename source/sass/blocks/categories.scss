@@ -1,33 +1,45 @@
-.categories {}
+// .categories {}
 
-.categories__wrapper {}
+// .categories__wrapper {}
 
 .categories__list {
   @include default-list-style;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin: 0 var(--page-padding);
 }
 
 .categories__item {
+  padding: 30px 20px 18px;
+  margin-bottom: 20px;
+
   background-color: var(--bg-accented-main-color);
+  background-repeat: no-repeat;
 
   &--weight-loss {
-    background: url(../img/icon-cat-slim.svg) no-repeat 0 0;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-position: 21px 22px;
   }
 
   &--weight-gain {
-    background: url(../img/icon-cat-pro.svg) no-repeat 0 0;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-position: 13px 24px;
   }
-
 }
 
 .categories__heading {
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 154%;
+  @include uppercase-heading(24px, 154%);
 
-  text-transform: uppercase;
+  margin: 0 0 29px 91px;
 }
+
 .categories__description {
+  margin: 0 0 38px 0;
+
   font-family: $text-font-stack;
   font-weight: normal;
   font-size: 14px;
@@ -35,13 +47,83 @@
 }
 
 .categories__link {
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 100%;
+  @include uppercase-heading(16px);
 
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--heading-main-color);
+}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+
+@media (min-width: $tablet-width) {
+  .categories__item {
+    padding: 53px;
+    padding-top: 77px;
+
+    &--weight-loss {
+      background-size: 200px 211px;
+      background-position: 90% 50%;
+    }
+
+    &--weight-gain {
+      background-size: 268px 220px;
+      background-position: 95% 50%;
+    }
+  }
+
+  .categories__heading {
+    margin: 0 0 24px 0;
+
+    font-size: 36px;
+    line-height: 100%;
+  }
+
+  .categories__description {
+    margin-right: 300px;
+  }
+}
+
+
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
+
+
+@media (min-width: $desktop-width) {
+  .categories__list {
+    flex-direction: row;
+  }
+
+  .categories__item {
+    width: calc((100% - 80px) / 2);
+    padding: 77px 50px 55px;
+    margin-bottom: 50px;
+
+    &:not(:nth-of-type(2n)) {
+      margin-right: 80px;
+    }
+
+    &--weight-loss {
+      background-size: 100px 106px;
+      background-position: 52px 41px;
+    }
+
+    &--weight-gain {
+      background-size: 134px 100px;
+      background-position: 33px 47px;
+    }
+  }
+
+  .categories__heading {
+    margin: 0 0 73px 166px;
+  }
+
+  .categories__description {
+    margin-right: 0;
+  }
 }

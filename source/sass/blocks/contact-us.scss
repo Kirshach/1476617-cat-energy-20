@@ -1,30 +1,47 @@
 .contact-us {
+  margin: 0 var(--page-padding);
+
   background-color: var(--bg-accented-main-color);
 }
 
-.contact-us__wrapper {}
+// .contact-us__wrapper {}
 
-.contact-us__header {}
+.contact-us__header {
+  display: flex;
+  justify-content: space-between;
+}
 
 .contact-us__heading {
-    font-family: $heading-font-stack;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 112%;
+  @include uppercase-heading(16px, 112%);
 
-    text-transform: uppercase;
-
-    color: var(--heading-main-color);
+  color: var(--heading-main-color);
 }
 
 .contact-us__address {
-    font-family: $text-font-stack;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
+  font-family: $text-font-stack;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.contact-us__map-static {}
+// .contact-us__map-static {}
 
-.contact-us__open-map {}
+// .contact-us__open-map {}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
+
+
+@media (min-width: $desktop-width) {
+  .contact-us__header {
+    position: absolute;
+  }
+}

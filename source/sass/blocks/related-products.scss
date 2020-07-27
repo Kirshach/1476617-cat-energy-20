@@ -1,8 +1,12 @@
-.related-products {}
+// .related-products {}
 
-.related-products__wrapper {}
+.related-products__wrapper {
+  margin: 0 var(--page-padding);
+}
 
-.related-products__heading {}
+.related-products__heading {
+  width: 100%;
+}
 
 .related-products__list {
   @include default-list-style;
@@ -14,16 +18,51 @@
 }
 
 .related-products__name {
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 100%;
-
-  text-transform: uppercase;
+  @include uppercase-heading(16px);
 
   color: var(--heading-secondary-color);
 }
 
-.related-products__quantity {}
+.related-products__description {
+  display: flex;
+  justify-content: space-between;
+}
 
-.related-products__price {}
+// .related-products__quantity {}
+
+// .related-products__price {}
+
+.related-products__order-button {
+  width: 100%;
+}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+
+@media (min-width: $tablet-width) {
+  .related-products__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
+
+
+@media (min-width: $desktop-width) {
+  .related-products__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .related-products__order-button {
+    width: 20%;
+  }
+}

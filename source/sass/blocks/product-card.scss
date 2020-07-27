@@ -1,27 +1,22 @@
-.product-card {}
+// .product-card {}
 
 .product-card__heading {
-  font-family: $heading-font-stack;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 125%;
-
-  text-transform: uppercase;
+  @include uppercase-heading(16px, 125%);
 }
 
-.product-card__description-list {
+.product-card__description {
   font-weight: normal;
   font-size: 12px;
   line-height: 133%;
 }
 
-.product-card__description-item {}
+// .product-card__description-item {}
 
-.product-card__description-term {}
+// .product-card__description-term {}
 
 .product-card__description-definition {
   padding-left: 0;
   margin-left: 0;
 }
 
-.product-card__order-button {}
+// .product-card__order-button {}

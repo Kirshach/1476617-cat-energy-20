@@ -1,7 +1,4 @@
 .site-list {
-  display: flex;
-  flex-direction: column;
-
   @include default-list-style;
 }
 

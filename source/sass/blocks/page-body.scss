@@ -3,6 +3,11 @@
 }
 
 .page-body {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+
   font-family: $text-font-stack;
   font-weight: 400;
   font-size: 14px;

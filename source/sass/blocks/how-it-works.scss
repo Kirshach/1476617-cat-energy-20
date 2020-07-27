@@ -1,31 +1,87 @@
-.how-it-works {}
+.how-it-works {
+  padding: 0 var(--page-padding);
+}
 
-.how-it-works__heading {}
+.how-it-works__heading {
+  margin: 0;
+  margin-bottom: 38px;
+}
 
-.how-it-works__wrapper {}
+// .how-it-works__wrapper {}
 
 .how-it-works__list {
   @include default-list-style;
+
+  display: grid;
+  gap: 20px;
 }
 
 .how-it-works__item {
+  display: flex;
+  align-items: center;
 
+  min-height: 60px;
+  padding-left: 80px;
 
-  background-position: 0 0;
+  background-position: 0 50%;
   background-repeat: no-repeat;
 
-  &--healthy{
-    background-image: url(../img/how-it-works-healthy.svg);
+  &--healthy {
+    background-image: url("../img/how-it-works-healthy.svg");
   }
+
   &--fast {
-    background-image: url(../img/how-it-works-fast.svg);
+    background-image: url("../img/how-it-works-fast.svg");
   }
-  &--replace{
-    background-image: url(../img/how-it-works-replace.svg);
+
+  &--replace {
+    background-image: url("../img/how-it-works-replace.svg");
   }
-  &--transform{
-    background-image: url(../img/how-it-works-transform.svg);
+
+  &--transform {
+    background-image: url("../img/how-it-works-transform.svg");
   }
 }
 
-.how-it-works__description {}
+.how-it-works__description {
+  margin: 0;
+}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+
+@media (min-width: $tablet-width) {
+  .how-it-works__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-it-works__item {
+    align-items: flex-start;
+
+    min-height: 250px;
+    padding-left: 0;
+    padding-top: 115px;
+
+    background-size: 80px 80px;
+    background-position: 0 0;
+  }
+
+  .how-it-works__description {
+    max-width: 250px;
+  }
+}
+
+
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
+
+
+@media (min-width: $desktop-width) {
+  .how-it-works__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

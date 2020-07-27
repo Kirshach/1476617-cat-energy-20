@@ -1,15 +1,27 @@
 .main-nav {
-  font-family: $heading-font-stack;
+  @include uppercase-heading (20px);
   font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
 
-  text-transform: uppercase;
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+  }
 }
 
-.main-nav__wrapper {}
+// .main-nav__wrapper {}
 
-.main-nav__list {}
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  outline: 2px solid blue;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
 
 .main-nav .site-list__link {
   display: block;

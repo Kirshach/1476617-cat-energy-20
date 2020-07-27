@@ -7,13 +7,15 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <a class="page-header__mascot-icon" href="index.html">
-        <img src="https://via.placeholder.com/50x50" height="#" width="#" alt="Талисман Cat Energy">
-      </a>
-      <a class="page-header__logo site-logo" href="index.html">
-        <img src="https://via.placeholder.com/100x20" height="#" width="#" alt="Cat Energy">
-      </a>
-      <button type="button" class="page-header__hamburger-toggler" aria-label="Открыть меню"></button>
+      <div class="page-header__wrapper">
+        <a class="page-header__mascot-icon" href="index.html">
+          <img src="https://via.placeholder.com/50x50" height="#" width="#" alt="Талисман Cat Energy">
+        </a>
+        <a class="page-header__logo" href="index.html">
+          <img src="https://via.placeholder.com/100x20" height="#" width="#" alt="Cat Energy">
+        </a>
+        <button type="button" class="page-header__hamburger-toggler" aria-label="Открыть меню"></button>
+      </div>
       <nav class="main-nav">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
@@ -40,282 +42,325 @@
         </h2>
         <div class="catalog__wrapper">
           <ul class="catalog__list">
-            <li class="catalog__item product-card">
-              <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy со вкусом курицы, 500 грамм" width="#" height="#">
-              <h3 class="product-card__heading">Cat Energy Pro 500 г</h3>
-              <dl class="product-card__description-list">
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Объем
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    500 г
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Вкус
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    Курица
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Цена
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    700 Р.
-                  </dd>
-                </div>
-              </dl>
+            <li class="catalog__product-card product-card">
+              <div class="product-card__img-container">
+                <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy со вкусом курицы, 500 грамм" width="#" height="#">
+              </div>
+              <div class="product-card__description">
+                <h3 class="product-card__heading">Cat Energy Pro 500 г</h3>
+                <dl class="product-card__description-list">
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Объем
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      500 г
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Вкус
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      Курица
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Цена
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      700 Р.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
               <a class="product-card__order-button button" href="#">Заказать</a>
             </li>
-            <li class="catalog__item product-card">
-              <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy со вкусом курицы, 1000 грамм" width="#" height="#">
-              <h3 class="product-card__heading">Cat Energy Pro 1000 г</h3>
-              <dl class="product-card__description-list">
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Объем
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    1000 г
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Вкус
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    Курица
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Цена
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    1000 Р.
-                  </dd>
-                </div>
-              </dl>
+            <li class="catalog__product-card product-card">
+              <div class="product-card__img-container">
+                <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy со вкусом курицы, 1000 грамм" width="#" height="#">
+              </div>
+              <div class="product-card__description">
+                <h3 class="product-card__heading">Cat Energy Pro 1000 г</h3>
+                <dl class="product-card__description-list">
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Объем
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      1000 г
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Вкус
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      Курица
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Цена
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      1000 Р.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
               <a class="product-card__order-button button" href="#">Заказать</a>
             </li>
-            <li class="catalog__item product-card">
-              <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy с рыбой, 500 грамм" width="#" height="#">
-              <h3 class="product-card__heading">Cat Energy Pro 500 г</h3>
-              <dl class="product-card__description-list">
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Объем
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    500 г
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Вкус
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    Рыба
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Цена
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    700 Р.
-                  </dd>
-                </div>
-              </dl>
+            <li class="catalog__product-card product-card">
+              <div class="product-card__img-container">
+                <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy с рыбой, 500 грамм" width="#" height="#">
+              </div>
+              <div class="product-card__description">
+                <h3 class="product-card__heading">Cat Energy Pro 500 г</h3>
+                <dl class="product-card__description-list">
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Объем
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      500 г
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Вкус
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      Рыба
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Цена
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      700 Р.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
               <a class="product-card__order-button button" href="#">Заказать</a>
             </li>
-            <li class="catalog__item product-card">
-              <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy со вкусом рыбы, 1000 грамм" width="#" height="#">
-              <h3 class="product-card__heading">Cat Energy Pro 1000 г</h3>
-              <dl class="product-card__description-list">
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Объем
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    1000 г
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Вкус
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    Рыба
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Цена
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    1000 Р.
-                  </dd>
-                </div>
-              </dl>
+            <li class="catalog__product-card product-card">
+              <div class="product-card__img-container">
+                <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy со вкусом рыбы, 1000 грамм" width="#" height="#">
+              </div>
+              <div class="product-card__description">
+                <h3 class="product-card__heading">Cat Energy Pro 1000 г</h3>
+                <dl class="product-card__description-list">
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Объем
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      1000 г
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Вкус
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      Рыба
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Цена
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      1000 Р.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
               <a class="product-card__order-button button" href="#">Заказать</a>
             </li>
-            <li class="catalog__item product-card">
-              <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy Slim со вкусом гречки, 500 грамм" width="#" height="#">
-              <h3 class="product-card__heading">Cat Energy Slim 500 г</h3>
-              <dl class="product-card__description-list">
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Объем
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    500 г
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Вкус
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    Гречка
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Цена
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    400 Р.
-                  </dd>
-                </div>
-              </dl>
+            <li class="catalog__product-card product-card">
+              <div class="product-card__img-container">
+                <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy Slim со вкусом гречки, 500 грамм" width="#" height="#">
+              </div>
+              <div class="product-card__description">
+                <h3 class="product-card__heading">Cat Energy Slim 500 г</h3>
+                <dl class="product-card__description-list">
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Объем
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      500 г
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Вкус
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      Гречка
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Цена
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      400 Р.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
               <a href="#" class="product-card__order-button button">Заказать</a>
             </li>
-            <li class="catalog__item product-card">
-              <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy Slim со вкусом гречки, 1000 грамм" width="#" height="#">
-              <h3 class="product-card__heading">Cat Energy Slim 1000 г</h3>
-              <dl class="product-card__description-list">
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Объем
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    1000 г
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Вкус
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    Гречка
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Цена
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    700 Р.
-                  </dd>
-                </div>
-              </dl>
+            <li class="catalog__product-card product-card">
+              <div class="product-card__img-container">
+                <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy Slim со вкусом гречки, 1000 грамм" width="#" height="#">
+              </div>
+              <div class="product-card__description">
+                <h3 class="product-card__heading">Cat Energy Slim 1000 г</h3>
+                <dl class="product-card__description-list">
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Объем
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      1000 г
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Вкус
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      Гречка
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Цена
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      700 Р.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
               <a class="product-card__order-button button" href="#">Заказать</a>
             </li>
-            <li class="catalog__item product-card">
-              <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy Slim со вкусом курицы, 500 грамм" width="#" height="#">
-              <h3 class="product-card__heading">Cat Energy Slim 500 г</h3>
-              <dl class="product-card__description-list">
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Объем
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    500 г
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Вкус
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    Рис
-                  </dd>
-                </div>
-                <div class="product-card__description-item">
-                  <dt class="product-card__description-term">
-                    Цена
-                  </dt>
-                  <dd class="product-card__description-definition">
-                    500 Р.
-                  </dd>
-                </div>
-              </dl>
+            <li class="catalog__product-card product-card">
+              <div class="product-card__img-container">
+                <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy Slim со вкусом курицы, 500 грамм" width="#" height="#">
+              </div>
+              <div class="product-card__description">
+                <h3 class="product-card__heading">Cat Energy Slim 500 г</h3>
+                <dl class="product-card__description-list">
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Объем
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      500 г
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Вкус
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      Рис
+                    </dd>
+                  </div>
+                  <div class="product-card__description-item">
+                    <dt class="product-card__description-term">
+                      Цена
+                    </dt>
+                    <dd class="product-card__description-definition">
+                      500 Р.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
               <a class="product-card__order-button button" href="#">Заказать</a>
+            </li>
+            <li class="catalog__product-card product-card">
+              <div class="product-card__img-container">
+                <img class="product-card__img" src="https://via.placeholder.com/120x110" alt="Упаковка Cat Energy Slim со вкусом курицы, 500 грамм" width="#" height="#">
+              </div>
+              <div class="product-card__description">
+                <h3 class="product-card__heading">Показать еще 100500 товаров</h3>
+                <p class="product-card__description">
+                  На самом деле вкусов гораздо больше!
+                </p>
+              </div>
+              <a class="product-card__order-button button button--alt-style" href="#">Показать все</a>
             </li>
           </ul>
         </div>
-        <div class="catalog__show-more show-more">
-          <p class="show-more__heading">Показать еще 100500 товаров</p>
-          <p class="show-more__paragraph">На самом деле вкусов гораздо больше!</p>
-          <a href="#" class="show-more__button button button--alt-style">Показать все</a>
-        </div>
       </section>
       <section class="related-products">
-        <h2 class="related-products__heading section-heading--second-level">Дополнительные товары</h2>
         <div class="related-products__wrapper">
+          <h2 class="related-products__heading section-heading section-heading--second-level">Дополнительные товары</h2>
           <ul class="related-products__list">
             <li class="related-products__item">
               <h3 class="related-products__name">
                 Сахарозаменитель
               </h3>
-              <p class="related-products__quantity">
-                1 упаковка (100 г)
-              </p>
-              <p class="related-products__price">
-                200 Р
-              </p>
-              <a href="#" class="button">Заказать</a>
+              <div class="related-products__description">
+                <p class="related-products__quantity">
+                  1 упаковка (100 г)
+                </p>
+                <p class="related-products__price">
+                  200 Р
+                </p>
+              </div>
+              <a class="button related-products__order-button" href="#">Заказать</a>
             </li>
             <li class="related-products__item">
               <h3 class="related-products__name">
                 Питьевая вода
               </h3>
-              <p class="related-products__quantity">
-                5 литров
-              </p>
-              <p class="related-products__price">
-                50 Р
-              </p>
-              <a href="#" class="button">Заказать</a>
+              <div class="related-products__description">
+                <p class="related-products__quantity">
+                  5 литров
+                </p>
+                <p class="related-products__price">
+                  50 Р
+                </p>
+              </div>
+              <a class="button related-products__order-button" href="#">Заказать</a>
             </li>
             <li class="related-products__item">
               <h3 class="related-products__name">
                 Молоко
               </h3>
-              <p class="related-products__quantity">
-                1 литр
-              </p>
-              <p class="related-products__price">
-                100 Р
-              </p>
-              <a href="#" class="button">Заказать</a>
+              <div class="related-products__description">
+                <p class="related-products__quantity">
+                  1 литр
+                </p>
+                <p class="related-products__price">
+                  100 Р
+                </p>
+              </div>
+              <a class="button related-products__order-button" href="#">Заказать</a>
             </li>
             <li class="related-products__item">
               <h3 class="related-products__name">
                 Витамины
               </h3>
-              <p class="related-products__quantity">
-                1 упаковка (30 гр)
-              </p>
-              <p class="related-products__price">
-                300 Р
-              </p>
-              <a href="#" class="button">Заказать</a>
+              <div class="related-products__description">
+                <p class="related-products__quantity">
+                  1 упаковка (30 гр)
+                </p>
+                <p class="related-products__price">
+                  300 Р
+                </p>
+              </div>
+              <a class="button related-products__order-button" href="#">Заказать</a>
             </li>
           </ul>
         </div>
@@ -345,7 +390,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__logo-wrapper">
-        <a class="page-footer__logo site-logo" href="index.html">
+        <a class="page-footer__logo" href="index.html">
           <img src="https://via.placeholder.com/120x25" height="#" width="#" alt="Cat Energy">
         </a>
       </div>
