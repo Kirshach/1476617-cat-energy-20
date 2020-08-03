@@ -3,28 +3,64 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  margin: 0 var(--page-padding);
 
   background-color: var(--bg-accented-main-color);
 }
 
-// .page-footer__logo-wrapper {}
-
-// .page-footer__logo {}
-
-// .page-footer__socials-wrapper {}
-
-.page-footer__socials-list {
-  display: flex;
+.page-footer__logo-container {
+  border-bottom: 1px solid var(--hr-main-color);
+  margin: 0 var(--page-padding);
+  padding: 2.32em 0;
 }
 
-// .page-footer__copyright-wrapper {}
+.page-footer__logo-link {
+  display: block;
+
+  width: min-content;
+  margin: 0 auto;
+}
+
+.page-footer__socials-container {
+  padding: 1.33em 0 0.7em;
+  margin: 0 var(--page-padding);
+  border-bottom: 1px solid var(--hr-main-color);
+}
+
+.page-footer__socials-list {
+  @include default-list-style;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-footer__social-list-item {
+  width: 25px;
+  height: 25px;
+  margin: 0 5.2% 0.63em;
+
+  filter: grayscale(100) brightness(70%);
+}
+
+.page-footer__copyright-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 var(--page-padding);
+  padding: 1.55em 0;
+}
 
 .page-footer__copyright-name {
   display: block;
+  position: relative;
+  top: -7px;
+  left: -1px;
+
+  max-width: 60%;
+
   font-weight: normal;
   font-size: 16px;
   line-height: 112%;
@@ -33,16 +69,74 @@
   color: var(--text-main-color);
 }
 
-// .page-footer__copyright-logo {}
+.page-footer__copyright-logo {
+  position: relative;
+  top: -5px;
+  left: 9px;
+
+  width: 44px;
+  height: 45px;
+
+  background: url("../img/htmlacademy.svg") no-repeat 50% 50%;
+
+  filter: grayscale(100) brightness(70%);
+}
 
 
 ////////////////////////////////////
 //     Раскладка на планшете     ///
 ////////////////////////////////////
 
-
 @media (min-width: $tablet-width) {
-  .page-footer {
+  .page-footer__wrapper {
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2em var(--page-padding);
+    margin: 0;
+
+    outline: 2px solid red;
+  }
+
+  .page-footer__logo-container {
+    margin: 0;
+    outline: 2px solid red;
+  }
+
+  .page-footer__socials-container {
+    outline: 2px solid green;
+    width: 60%;
+    margin: 0;
+  }
+
+  .page-footer__copyright-container {
+    position: static;
+    justify-content: end;
+
+    // Временно ????????
+    width: 200px;
+    //
+    margin: 0;
+    outline: 2px solid blue;
+  }
+
+  .page-footer__social-list-item {
+    height: 33px;
+    width: 33px;
+
+    margin: 0 2.1% 0.63em;
+  }
+
+  .page-footer__copyright-name {
+    position: static;
+    outline: 2px solid red;
+  }
+
+  .page-footer__copyright-logo {
+    position: static;
+    outline: 2px solid red;
+
+    margin-left: 1.2em;
   }
 }

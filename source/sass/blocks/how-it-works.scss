@@ -1,11 +1,12 @@
 // .how-it-works {}
 
 .how-it-works__heading {
-  margin: 0 var(--page-padding) 38px;
+  margin: 0 var(--page-padding) 1.11em;
 }
 
 .how-it-works__wrapper {
-  margin: 0 var(--page-padding);
+
+  margin: 0 var(--page-padding) 3em;
 }
 
 .how-it-works__list {
@@ -18,31 +19,47 @@
 .how-it-works__item {
   display: flex;
   align-items: center;
+  position: relative;
 
   min-height: 60px;
   padding-left: 80px;
 
-  background-position: 0 50%;
-  background-repeat: no-repeat;
+  &::after {
+    $content-size: 60px;
+    content: "";
+    position: absolute;
+    top: calc(50% - #{$content-size} / 2);
+    left: 0;
 
-  &--healthy {
+    width: $content-size;
+    height: $content-size;
+    background-color: var(--special-color);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--healthy::after {
     background-image: url("../img/how-it-works-healthy.svg");
   }
 
-  &--fast {
+  &--fast::after {
     background-image: url("../img/how-it-works-fast.svg");
   }
 
-  &--replace {
+  &--replace::after {
     background-image: url("../img/how-it-works-replace.svg");
   }
 
-  &--transform {
+  &--transform::after {
     background-image: url("../img/how-it-works-transform.svg");
   }
 }
 
 .how-it-works__description {
+  position: relative;
+  top: -1px;
+
+  // max-width: calc(100% - 220px);
   margin: 0;
 }
 
@@ -53,19 +70,52 @@
 
 
 @media (min-width: $tablet-width) {
+  .how-it-works__wrapper {
+    margin-bottom: 2.65em;
+  }
+
+  .how-it-works__heading {
+    margin-bottom: 1.2em;
+  }
+
   .how-it-works__list {
+    counter-reset: how-it-works-items;
     grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 4.76em;
+    grid-column-gap: 8.5%;
   }
 
   .how-it-works__item {
+    counter-increment: how-it-works-items;
     align-items: flex-start;
 
     min-height: 250px;
+    padding-top: 7.07em;
+    padding-bottom: 3.7em;
     padding-left: 0;
-    padding-top: 115px;
 
-    background-size: 80px 80px;
-    background-position: 0 0;
+    font-size: 16px;
+    line-height: 150%;
+
+    &::before {
+      content: counter(how-it-works-items);
+      position: absolute;
+      top: -39px;
+      left: 35%;
+
+      font-family: $heading-font-stack;
+      font-size: 280px;
+      line-height: 100%;
+
+      color: var(--bg-accented-main-color);
+    }
+
+    &::after {
+      top: 0;
+
+      width: 80px;
+      height: 80px;
+    }
   }
 
   .how-it-works__description {
@@ -82,5 +132,14 @@
 @media (min-width: $desktop-width) {
   .how-it-works__list {
     grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 6.5%;
+
+    width: 100%;
+  }
+
+  .how-it-works__item {
+    &::before {
+      left: 47%;
+    }
   }
 }

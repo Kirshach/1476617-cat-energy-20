@@ -1,31 +1,50 @@
 // .contact-us {}
 
 .contact-us__wrapper {
-  margin: 0 var(--page-padding);
-
-  background-color: var(--bg-accented-main-color);
+  position: relative;
+  outline-offset: -2px;
 }
 
 .contact-us__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  padding: 1.05em var(--page-padding) 0.9em;
+  background: var(--bg-main-color);
+  outline: 2px solid red;
 }
 
 .contact-us__heading {
-  @include uppercase-heading(16px, 112%);
+  @include uppercase-heading(16px, 125%);
 
   color: var(--heading-main-color);
 }
 
 .contact-us__address {
+  padding: 0;
+  margin: 0;
+  margin-right: 4px;
+
+  width: auto;
+
   font-family: $text-font-stack;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 144%;
 }
 
-// .contact-us__map-static {}
+.contact-us__address-paragraph {
+  padding: 0;
+  margin: 0;
+}
+
+// .contact-us__mini-map-container {}
+
+.contact-us__mini-map {
+  display: block;
+}
 
 // .contact-us__open-map {}
 
@@ -33,6 +52,32 @@
 ////////////////////////////////////
 //     Раскладка на планшете     ///
 ////////////////////////////////////
+
+@media (min-width: $tablet-width) {
+  .contact-us__header {
+    position: relative;
+    top: 2px;
+    left: 1px;
+
+    padding: 3.3em calc(var(--page-padding) + 2.9em);
+  }
+
+  .contact-us__heading {
+    font-size: 20px;
+    line-height: 125%;
+  }
+
+  .contact-us__address {
+    font-size: 16px;
+    line-height: 125%;
+
+    text-align: right;
+  }
+
+  .contact-us__address-top {
+    margin-bottom: 1.25em;
+  }
+}
 
 
 ////////////////////////////////////
@@ -43,5 +88,22 @@
 @media (min-width: $desktop-width) {
   .contact-us__header {
     position: absolute;
+    top: 25%;
+    left: 8%;
+
+    width: 39.5%;
+    padding: 3em 4.7em;
+  }
+
+  .contact-us__heading {
+    width: max-content;
+    outline: 2px solid rgba(blue, 0.3);
+    outline-offset: 2px;
+  }
+
+  .contact-us__address {
+    width: max-content;
+    outline: 2px solid rgba(green, 0.3);
+    text-align: left;
   }
 }

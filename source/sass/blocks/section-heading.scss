@@ -4,6 +4,9 @@
   font-weight: normal;
   line-height: 100%;
 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
   color: var(--heading-main-color);
 
   &--second-level {
