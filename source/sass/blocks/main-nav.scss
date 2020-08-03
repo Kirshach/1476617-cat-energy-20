@@ -1,34 +1,132 @@
-.main-nav {
-  @include uppercase-heading (20px);
+// .main-nav {}
+
+.main-nav__wrapper {
+  @include uppercase-heading (20px, 125%);
   font-weight: 500;
 
-  @media (min-width: $tablet-width) {
+  width: 100%;
+
+  .site-list__item {
+    display: flex;
+
+    width: 100%;
+    padding: 0.5em 1em;
+    border-top: 1px solid var(--border-main-color);
+
+    &:last-of-type {
+      border-bottom: 1px solid var(--border-main-color);
+    }
+  }
+
+  .site-list__link {
+    display: block;
+
+    max-width: 100%;
+    padding: 0.5em 1em;
+    margin: auto;
+
+    text-align: center;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+.main-nav__site-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+@media (min-width: $tablet-width) {
+  .main-nav__wrapper {
+    // Переменные задают паддинги для ссылок меню и элементов списка меню
+    // Сумма переменных задаёт визуальное смещение меню к соответствующему макету месту
+    $link-sides-padding: 0.8em;
+    $item-sides-padding: 0.2em;
+
+    position: relative;
+    left: $link-sides-padding + $item-sides-padding;
+
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
+
+    .site-list__item {
+      width: auto;
+      max-width: 40%;
+      // outline: 2px solid blue;
+      padding: 0 $item-sides-padding;
+      border: none;
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+
+    .site-list__link {
+      position: relative;
+      padding: 0.45em $link-sides-padding;
+    }
+
+    .site-list__link--current::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: $link-sides-padding;
+
+      width: calc(100% - #{$link-sides-padding} * 2);
+      height: 2px;
+
+      // Ожидает наличия заданной в page-header__wrapper,
+      // либо переназначенной в page-header__wrapper переменной
+      background-color: var(--special-color);
+    }
   }
-}
 
-// .main-nav__wrapper {}
-
-.main-nav__list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  outline: 2px solid blue;
-
-  @media (min-width: $tablet-width) {
+  .main-nav__site-list {
     flex-direction: row;
+    justify-content: end;
+    flex-wrap: wrap;
   }
 }
 
-.main-nav .site-list__link {
-  display: block;
 
-  width: 100%;
-  padding-top: 22px;
-  padding-bottom: 24px;
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
 
-  text-align: center;
+@media (min-width: $desktop-width) {
+  .main-nav__wrapper {
+    $link-sides-padding: 0.8em;
+    $item-sides-padding: 0.07em;
+
+    position: relative;
+    left: $link-sides-padding + $item-sides-padding;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    .site-list__link {
+      padding: 0.3em $link-sides-padding;
+    }
+
+    .site-list__link--current::before {
+      background-color: var(--special-color);
+    }
+
+    .site-list__item {
+      padding: 0 $item-sides-padding;
+    }
+  }
+
+  .page-header__main-page-wrapper {
+    .site-list__link--current::before {
+      background-color: var(--text-alt-color);
+    }
+  }
 }

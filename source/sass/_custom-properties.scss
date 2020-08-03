@@ -1,24 +1,32 @@
 :root {
   // Глобальные цвета
+  --bg-main-color: #ffffff;
+  --bg-accented-main-color: #f2f2f2;
+  --bg-accented-secondary-color: #eaeaea;
+
+  --border-main-color: #e6e6e6;
+  --border-secondary-color: #cdcdcd;
+
+  --box-shadow-main-color: #d5d5d5;
+
+  --heading-main-color: #000000;
+  --heading-secondary-color: #222222;
+
+  --hr-main-color: #d9d9d9;
+
+  --slider-bg-color: #dcdcdc;
+
   --special-color: #68b738;
 
   --text-main-color: #444444;
   --text-alt-color: #ffffff;
 
-  --heading-main-color: #000000;
-  --heading-secondary-color: #222222;
-
-  --bg-main-color: #ffffff;
-  --bg-accented-main-color: #f2f2f2;
-  --bg-accented-secondary-color: #eaeaea;
-
-  --border-main-color: #f6f6f6;
-  --border-secondary-color: #cdcdcd;
-
 
   // Уникальные цвета блоков
   --promo-mobile-bg-color: #63a73a;
   --promo-desktop-bg-color: #65a93c;
+
+  --results-border-color: #bababa;
 
 
   // Шрифты
@@ -27,13 +35,13 @@
 
 
   // Внутренние паддинги страницы
-  --page-padding: 20px;
+  --page-padding: calc(11% - 15px);
 
   @media (min-width: $tablet-width) {
-    --page-padding: 30px;
+    --page-padding: calc(13% - 70px);
   }
 
   @media (min-width: $desktop-width) {
-    --page-padding: 110px;
+    --page-padding: calc(20% - 178px);
   }
 }

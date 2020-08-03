@@ -1,16 +1,22 @@
-.promo {
-  padding: 27px var(--page-padding) 0 var(--page-padding);
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2em var(--page-padding) 0 var(--page-padding);
 
   text-align: center;
 
   color: var(--text-alt-color);
-  background: var(--promo-mobile-bg-color) url("../img/index-background-mobile@1x.jpg") no-repeat center top;
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat center top;
+
+  word-wrap: break-word;
 }
 
 // .promo__wrapper {}
 
 .promo__heading {
-  padding: 0 15px;
+  max-width: 100%;
+  padding: 0 0.35em 0.25em;
   margin: 0 auto;
 
   font-family: $heading-font-stack;
@@ -22,15 +28,18 @@
 }
 
 .promo__slogan {
-  @include uppercase-heading(14px);
+  @include uppercase-heading(14px, 135%);
+  margin-bottom: 1.75em;
 }
 
-// .promo__img {}
+.promo__img {
+  margin: 0 auto 0.25em;
+}
 
 .promo__link {
-  height: 40px;
+  order: 1;
   width: 100%;
-  padding: 10px 0;
+  padding: 0.8em 1em;
 
   @include uppercase-heading (14px, 129%);
   text-decoration: none;
@@ -43,32 +52,47 @@
 
 
 @media (min-width: $tablet-width) {
-  .promo {
-    min-height: 810px;
-    background: var(--bg-main-color);
-    color: var(--text-main-color);
+  .promo__wrapper {
+    position: relative;
+
+    // min-height: 810px;
+    padding: 2.25em 15.2% 35.3em;
+    margin-bottom: 0.67em;
+
+    background: transparent;
+    color: var(--heading-main-color);
     text-align: left;
   }
 
   .promo__heading {
+    font-size: 60px;
     text-align: left;
+
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 0.06em;
   }
 
   .promo__slogan {
-    @include uppercase-heading(20px);
+    @include uppercase-heading(20px, 129%);
+    margin-bottom: 2.3em;
+  }
+
+  .promo__link {
+    position: relative;
+    left: -5px;
+    width: max-content;
+    max-width: 50%;
+    padding: 0.7em 1.3em;
+
+    font-size: 20px;
   }
 
   .promo__img {
     position: absolute;
+    bottom: 300px;
+    right: 200px;
     z-index: -1;
-  }
-
-  .promo__link {
-    width: 244px;
-    height: 54px;
-    padding: 16px 0;
-
-    @include uppercase-heading (20px);
   }
 }
 
@@ -77,17 +101,31 @@
 //     Раскладка на десктопе     ///
 ////////////////////////////////////
 
-
 @media (min-width: $desktop-width) {
-  .promo {
-    // Здесь располагаются хитрые манипуляции, "подкладывающие" промо-блок под хэдер
-    position: relative;
-    z-index: -1;
-    padding-top: 97px;
-    margin-top: -70px;
-    // А здесь определяются bg, ради которых это было сделано
-    background:
-      url("../img/index-background-desktop@1x.jpg") no-repeat top -10px right,
-      linear-gradient(to right, var(--bg-main-color) 50%, var(--promo-desktop-bg-color) 50%);
+  .promo__wrapper {
+    min-height: 608px;
+    padding: 6.1em 50% 1.5em calc(20% - 98px);
+
+    background: transparent;
+    outline: 2px solid red;
+  }
+
+  .promo__heading {
+    margin-right: 0.8em;
+  }
+
+  .promo__slogan {
+    margin-right: 2em;
+  }
+
+  .promo__link {
+    max-width: 72.5%;
+    top: 2px;
+    left: 0;
+  }
+
+  .promo__img {
+    top: 10%;
+    left: 50%;
   }
 }

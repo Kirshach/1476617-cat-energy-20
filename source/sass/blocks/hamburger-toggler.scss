@@ -1,0 +1,13 @@
+.hamburger-toggler--active {
+  .hamburger-toggler__top-bar {
+    transform: translateX(6px) rotate(45deg);
+  }
+
+  .hamburger-toggler__middle-bar {
+    opacity: 0;
+  }
+
+  .hamburger-toggler__bottom-bar {
+    transform: translateX(-11px) translateY(6px) rotate(-45deg);
+  }
+}

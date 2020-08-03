@@ -1,0 +1,31 @@
+.single-value-slider {
+  position: relative;
+
+  height: 34px;
+}
+
+.single-value-slider__bg-rail {
+  $height: 6px;
+  position: absolute;
+  top: calc(50% - #{$height} / 2);
+
+  width: 100%;
+  height: $height;
+
+  border-radius: 3px;
+  background-color: var(--slider-bg-color);
+}
+
+.single-value-slider__knob {
+  position: absolute;
+  top: 1px;
+  left: calc(50% - 16px);
+
+  height: 32px;
+  width: 32px;
+  border: 12px solid var(--bg-main-color);
+  border-radius: 50%;
+
+  background-color: var(--special-color);
+  box-shadow: 0 1px 1px 2px var(--box-shadow-main-color);
+}

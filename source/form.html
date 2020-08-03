@@ -2,35 +2,44 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__mascot-icon" href="index.html">
-          <img src="https://via.placeholder.com/50x50" height="#" width="#" alt="Талисман Cat Energy">
-        </a>
-        <a class="page-header__logo" href="index.html">
-          <img src="https://via.placeholder.com/100x20" height="#" width="#" alt="Cat Energy">
-        </a>
-        <button type="button" class="page-header__hamburger-toggler" aria-label="Открыть меню"></button>
-      </div>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link">Подбор программы</a>
-            </li>
-          </ul>
+        <div class="page-header__header-top">
+          <a class="page-header__mascot-icon" href="index.html">
+            <img src="https://via.placeholder.com/50x50" height="#" width="#" alt="Талисман Cat Energy">
+          </a>
+          <a class="page-header__logo" href="index.html">
+            <img src="https://via.placeholder.com/100x20" height="#" width="#" alt="Cat Energy">
+          </a>
+          <button class="page-header__hamburger-toggler hamburger-toggler" type="button" aria-label="Открыть меню">
+            <svg class="hamburger-toggler__svg" class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="black">
+              <rect class="hamburger-toggler__top-bar" x="0" y="3" width="24" height="2"/>
+              <rect class="hamburger-toggler__middle-bar" x="0" y="11" width="24" height="2"/>
+              <rect class="hamburger-toggler__bottom-bar" x="0" y="19" width="24" height="2"/>
+            </svg>
+          </button>
         </div>
-      </nav>
+        <nav class="page-header__main-nav main-nav">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__site-list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--current">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <section class="pick-your-diet">
@@ -131,7 +140,7 @@
         <div class="contact-us__wrapper">
           <header class="contact-us__header">
             <h2 class="contact-us__heading">
-              Приглашаем к сотрудничеству дилеров!
+              Приглашаем<br>к сотрудничеству<br> дилеров!
             </h2>
             <address class="contact-us__address">
               <span class="no-wrap">ул. Большая Конюшенная,</span><span class="no-wrap">д. 19/8</span> <span class="no-wrap">Санкт-Петербург</span>
@@ -139,34 +148,36 @@
           </header>
           <div class="contact-us__map-static">
             <a class="contact-us__open-map" href="#">
-              <img src="https://via.placeholder.com/320x362" width="320" height="362" alt="Наше местоположение на карте">
+              <img class="contact-us__mini-map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Наше местоположение на карте">
             </a>
           </div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__logo-wrapper">
-        <a class="page-footer__logo" href="index.html">
-          <img src="https://via.placeholder.com/120x25" height="#" width="#" alt="Cat Energy">
-        </a>
-      </div>
-      <div class="page-footer__socials-wrapper">
-        <ul class="page-footer__socials-list socials-list">
-          <li class="socials-list__item">
-            <a class="socials-list__link socials-list__link--vk" href="#" aria-label="Вконтакте"></a>
-          </li>
-          <li class="socials-list__item">
-            <a class="socials-list__link socials-list__link--instagram" href="#" aria-label="Инстаграм"></a>
-          </li>
-          <li class="socials-list__item">
-            <a class="socials-list__link socials-list__link--fb" href="#" aria-label="Фейсбук"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright-wrapper">
-        <a class="page-footer__copyright-name" href="https://htmlacademy.ru/">HTML Academy</a>
-        <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/"></a>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo-container">
+          <a class="page-footer__logo" href="index.html">
+            <img src="https://via.placeholder.com/120x25" height="#" width="#" alt="Cat Energy">
+          </a>
+        </div>
+        <div class="page-footer__socials-container">
+          <ul class="page-footer__socials-list socials-list">
+            <li class="socials-list__item">
+              <a class="socials-list__link socials-list__link--vk" href="#" aria-label="Вконтакте"></a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link socials-list__link--instagram" href="#" aria-label="Инстаграм"></a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link socials-list__link--fb" href="#" aria-label="Фейсбук"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright-container">
+          <a class="page-footer__copyright-name" href="https://htmlacademy.ru/">HTML Academy</a>
+          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/"></a>
+        </div>
       </div>
     </footer>
   </body>
