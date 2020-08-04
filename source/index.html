@@ -11,10 +11,14 @@
       <div class="page-header__wrapper page-header__main-page-wrapper">
         <div class="page-header__header-top">
           <a class="page-header__mascot-icon">
-            <img src="https://via.placeholder.com/50x50" height="#" width="#" alt="Талисман Cat Energy">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/site-mascot-desktop.svg" sizes="70px">
+              <source media="(min-width: 768px)" srcset="img/site-mascot-tablet.svg" sizes="61px">
+              <img src="img/site-mascot-mobile.svg" alt="Талисман Cat Energy">
+            </picture>
           </a>
           <a class="page-header__logo">
-            <img src="https://via.placeholder.com/100x20" height="#" width="#" alt="Cat Energy">
+            <img class="page-header__logo-img" src="img/site-logo.svg" height="18" width="101" alt="Cat Energy">
           </a>
           <button class="page-header__hamburger-toggler hamburger-toggler" type="button" aria-label="Открыть меню">
             <svg class="hamburger-toggler__svg" class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="black">
@@ -43,13 +47,20 @@
     </header>
     <main class="page-main">
       <section class="promo">
+        <!-- Ради лучшей резины я решил поместить фон блока в отдельный контейнер. его высота
+          динамически меняется в зависимости от ширины окна, а фон содержит градиент и изображение -->
+        <div class="promo__bg-container"></div>
         <div class="promo__wrapper">
           <h1 class="promo__heading">
             Функциональное питание <span class="no-wrap">для котов</span> <span class="visually-hidden">Cat Energy</span>
           </h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <a class="promo__link button" href="#">Подобрать программу</a>
-          <img class="promo__img" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Упаковка Cat Energy Pro с вкусом курицы">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x" sizes="552px">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x" sizes="709px">
+            <img class="promo__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Упаковка Cat Energy Pro с вкусом курицы">
+          </picture>
         </div>
       </section>
       <section class="categories">

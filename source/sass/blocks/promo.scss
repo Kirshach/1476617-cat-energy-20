@@ -2,22 +2,45 @@
   display: flex;
   flex-direction: column;
 
-  padding: 2em var(--page-padding) 0 var(--page-padding);
+  position: relative;
 
-  text-align: center;
+  padding: 1.97em var(--page-padding) 0 var(--page-padding);
 
   color: var(--text-alt-color);
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat center top;
 
   word-wrap: break-word;
+  text-align: center;
+
+  & > * {
+    // outline: 2px solid red;
+  }
 }
 
-// .promo__wrapper {}
+.promo__bg-container {
+  position: absolute;
+
+  width: 100%;
+  padding: calc(15% + 105px);
+
+  background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to right, var(--promo-mobile-bg-first-color) 50%, var(--promo-mobile-bg-second-color) 50%);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+
+  // Не дадим блоку сжаться при ширине вьюпорта менее 320px
+  @media (max-width: 319px) {
+    padding: 153px 160px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient(to right, var(--promo-mobile-bg-first-color) 50%, var(--promo-mobile-bg-second-color) 50%);
+  }
+}
 
 .promo__heading {
-  max-width: 100%;
-  padding: 0 0.35em 0.25em;
-  margin: 0 auto;
+  max-width: calc(50% + 5em);
+  padding: 0 0.35em;
+  margin: 0 auto calc(5% - 0.16em);
 
   font-family: $heading-font-stack;
   font-size: 36px;
@@ -29,11 +52,14 @@
 
 .promo__slogan {
   @include uppercase-heading(14px, 135%);
-  margin-bottom: 1.75em;
+  margin-bottom: calc(20% - 2.1em);
 }
 
 .promo__img {
-  margin: 0 auto 0.25em;
+  display: block;
+  width: calc(35% + 182px);
+  // outline: 2px solid blue;
+  margin: 0 auto calc(7% - 1.25em);
 }
 
 .promo__link {
@@ -55,8 +81,9 @@
   .promo__wrapper {
     position: relative;
 
-    // min-height: 810px;
-    padding: 2.25em 15.2% 35.3em;
+    // 2.25em
+    padding: calc(12% - 4.3em) 15.2% calc(703px - 27%);
+    // 35.3em;
     margin-bottom: 0.67em;
 
     background: transparent;
@@ -64,13 +91,16 @@
     text-align: left;
   }
 
+  .promo__bg-container {
+    display: none;
+  }
+
   .promo__heading {
     font-size: 60px;
     text-align: left;
 
     padding-left: 0;
-    margin: 0;
-    margin-bottom: 0.06em;
+    margin: 0 0 0.31em 0;
   }
 
   .promo__slogan {
@@ -90,9 +120,14 @@
 
   .promo__img {
     position: absolute;
-    bottom: 300px;
-    right: 200px;
+    bottom: -68px;
+    right: 30px;
     z-index: -1;
+
+    width: 709px;
+
+    margin-right: calc(15% - 115px);
+    margin-bottom: calc(64px - 3.5%);
   }
 }
 
@@ -107,7 +142,6 @@
     padding: 6.1em 50% 1.5em calc(20% - 98px);
 
     background: transparent;
-    outline: 2px solid red;
   }
 
   .promo__heading {
@@ -125,7 +159,8 @@
   }
 
   .promo__img {
-    top: 10%;
-    left: 50%;
+    width: 552px;
+    top: 3px;
+    right: 230px;
   }
 }

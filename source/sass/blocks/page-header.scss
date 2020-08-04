@@ -2,8 +2,6 @@
 
 // .page-header__mascot-icon {}
 
-// .page-header__logo {}
-
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
@@ -16,17 +14,19 @@
   background: transparent;
 }
 
+.page-header__logo {
+  position: relative;
+  left: 3px;
+  top: 3px;
+}
+
 .page-header__header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
-  // АХТУНГ ВРЕМЕННОЕ ПРАВИЛО!!!!!!!
-  // АХТУНГ ВРЕМЕННОЕ ПРАВИЛО!!!!!!!
-  // АХТУНГ ВРЕМЕННОЕ ПРАВИЛО!!!!!!!
-  min-height: 65px;
-  padding: 0 var(--page-padding);
+  padding: 0.8em var(--page-padding);
 }
 
 .page-header__hamburger-toggler {
@@ -64,12 +64,17 @@
     flex-direction: row;
     justify-content: space-between;
 
-    // АХТУНГ ВРЕМЕННОЕ ПРАВИЛО!!!!!!!
-    // АХТУНГ ВРЕМЕННОЕ ПРАВИЛО!!!!!!!
-    // АХТУНГ ВРЕМЕННОЕ ПРАВИЛО!!!!!!!
-    min-height: 108px;
+    padding: 1.9em var(--page-padding);
+  }
 
-    padding: 0 var(--page-padding);
+  .page-header__logo {
+    left: 11px;
+    top: 1px;
+  }
+
+  .page-header__logo-img {
+    width: 102px;
+    height: 19px;
   }
 
   .page-header__main-nav {
@@ -90,8 +95,6 @@
     width: auto;
     padding: 0;
     padding-right: 20px;
-
-    background-color: yellow;
   }
 }
 
@@ -101,12 +104,21 @@
 
 @media (min-width: $desktop-width) {
   .page-header__wrapper {
-    padding-top: 52px;
-    padding-bottom: 20px;
+    padding: 3.8em var(--page-padding) 1.5em;
   }
 
   .page-header__main-page-wrapper {
     color: var(--text-alt-color);
+  }
+
+  .page-header__logo {
+    left: 13px;
+    top: 3px;
+  }
+
+  .page-header__logo-img {
+    width: 118px;
+    height: 22px;
   }
 
   .page-header__main-nav {

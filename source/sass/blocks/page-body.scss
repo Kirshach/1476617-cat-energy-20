@@ -33,5 +33,12 @@
     background-image: url("../img/index-background-desktop@1x.jpg"), url("../img/index-background-desktop-stretchie.svg");
     background-repeat: no-repeat;
     background-position: top right;
+    background-size: 720px auto, 100%;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .page-body--main-page {
+      background-image: url("../img/index-background-desktop@2x.jpg"), url("../img/index-background-desktop-stretchie.svg");
+    }
   }
 }
