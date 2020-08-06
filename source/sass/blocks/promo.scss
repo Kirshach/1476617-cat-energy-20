@@ -4,16 +4,14 @@
 
   position: relative;
 
-  padding: 1.97em var(--page-padding) 0 var(--page-padding);
+  padding: 1.97em var(--page-padding) 1.57em var(--page-padding);
 
   color: var(--text-alt-color);
 
   word-wrap: break-word;
   text-align: center;
 
-  & > * {
-    // outline: 2px solid red;
-  }
+  overflow: hidden;
 }
 
 .promo__bg-container {
@@ -22,7 +20,7 @@
   width: 100%;
   padding: calc(15% + 105px);
 
-  background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to right, var(--promo-mobile-bg-first-color) 50%, var(--promo-mobile-bg-second-color) 50%);
+  background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to right, var(--promo-mobile-bg-first-color) 40%, var(--promo-mobile-bg-second-color) 60%);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
@@ -65,7 +63,7 @@
 .promo__link {
   order: 1;
   width: 100%;
-  padding: 0.8em 1em;
+  padding: calc(2% + 0.39em) 1em;
 
   @include uppercase-heading (14px, 129%);
   text-decoration: none;
@@ -81,10 +79,11 @@
   .promo__wrapper {
     position: relative;
 
-    // 2.25em
-    padding: calc(12% - 4.3em) 15.2% calc(703px - 27%);
-    // 35.3em;
-    margin-bottom: 0.67em;
+    // Отступ сверху тянется, но не меньше 2.25em
+    --padding-top: max(calc(12% - 4.3em), 2.25em);
+
+    padding: var(--padding-top) 15.2% calc(655px - 17%);
+    margin-bottom: 0;
 
     background: transparent;
     color: var(--heading-main-color);
@@ -112,7 +111,7 @@
     position: relative;
     left: -5px;
     width: max-content;
-    max-width: 50%;
+    max-width: 60%;
     padding: 0.7em 1.3em;
 
     font-size: 20px;
@@ -120,14 +119,11 @@
 
   .promo__img {
     position: absolute;
-    bottom: -68px;
-    right: 30px;
+    bottom: -4.5%;
+    right: calc(10% - 47px);
     z-index: -1;
 
     width: 709px;
-
-    margin-right: calc(15% - 115px);
-    margin-bottom: calc(64px - 3.5%);
   }
 }
 
@@ -136,10 +132,10 @@
 //     Раскладка на десктопе     ///
 ////////////////////////////////////
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width + 80px) {
   .promo__wrapper {
-    min-height: 608px;
-    padding: 6.1em 50% 1.5em calc(20% - 98px);
+    min-height: 640px;
+    padding: 6.1em calc(50% + 20px) 2.5em calc(20% - 98px);
 
     background: transparent;
   }
@@ -161,6 +157,6 @@
   .promo__img {
     width: 552px;
     top: 3px;
-    right: 230px;
+    right: calc(40% - 245px);
   }
 }

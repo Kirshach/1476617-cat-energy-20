@@ -10,9 +10,8 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 1.05em var(--page-padding) 0.9em;
+  padding: 4.8% var(--page-padding) calc(4.8% - 0.2em);
   background: var(--bg-main-color);
-  outline: 2px solid red;
 }
 
 .contact-us__heading {
@@ -53,13 +52,13 @@
 //     Раскладка на планшете     ///
 ////////////////////////////////////
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width + 80px) {
   .contact-us__header {
     position: relative;
     top: 2px;
     left: 1px;
 
-    padding: 3.3em calc(var(--page-padding) + 2.9em);
+    padding: 6% calc(var(--page-padding) + 2.87em);
   }
 
   .contact-us__heading {
@@ -77,6 +76,10 @@
   .contact-us__address-top {
     margin-bottom: 1.25em;
   }
+
+  .contact-us__mini-map {
+    height: 400px;
+  }
 }
 
 
@@ -85,7 +88,7 @@
 ////////////////////////////////////
 
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width - 320px) {
   .contact-us__header {
     position: absolute;
     top: 25%;
@@ -93,6 +96,8 @@
 
     width: 39.5%;
     padding: 3em 4.7em;
+
+    outline: 2px solid red;
   }
 
   .contact-us__heading {
@@ -105,5 +110,9 @@
     width: max-content;
     outline: 2px solid rgba(green, 0.3);
     text-align: left;
+  }
+
+  .contact-us__mini-map {
+    height: 400px;
   }
 }

@@ -4,7 +4,7 @@
   display: grid;
   position: relative;
 
-  padding: 2.1em 0 2.55em;
+  padding: calc(3% + 1.35em) 0 2.55em;
   background-color: var(--bg-accented-secondary-color);
 
   word-wrap: break-word;
@@ -12,12 +12,12 @@
 
 .results-example__heading {
   padding: 0;
-  margin: 0 var(--page-padding) 0.98em;
+  margin: 0 var(--page-padding) calc(3% + 0.7em);
 }
 
 .results-example__text-block {
   padding: 0;
-  margin: 0 var(--page-padding) 0.8em;
+  margin: 0 var(--page-padding) calc(5% - 0.32em);
 }
 
 .results-example__list {
@@ -27,8 +27,8 @@
   flex-wrap: wrap;
 
   width: 100%;
-  padding: 0 var(--page-padding);
-  margin: 0.95em 0 0.68em;
+  padding: 0 calc(30% - 76px);
+  margin: 0.95em 0 calc(2% + 0.25em);
 }
 
 .results-example__item {
@@ -53,6 +53,7 @@
 .results-example__definition {
   position: relative;
   top: -0.72em;
+
   width: max-content;
   max-width: 75%;
   padding: 0 1em 0;
@@ -72,7 +73,7 @@
   color: var(--heading-main-color);
 
   text-align: center;
-  margin: 0 var(--page-padding) 1em;
+  margin: 0 var(--page-padding) calc(3% + 1.7em);
 
   br {
     display: none;
@@ -89,24 +90,28 @@
 }
 
 .results-example__img-container {
-  margin-bottom: 2.28em;
-  width: calc(20% + 150px);
+  margin-bottom: calc(2% + 1.85em);
+  width: calc(30% + 224px);
 }
 
 .results-example__img {
   display: none;
-}
-
-.results-example__img--current {
-  display: block;
+  position: relative;
 
   width: 100%;
   height: auto;
 }
 
+.results-example__img--current {
+  display: block;
+}
+
 // .results-example__img--before {}
 
-// .results-example__img--after {}
+.results-example__img--after {
+  top: 10px;
+  left: -6px;
+}
 
 .results-example__figcaption {
   order: 1;
@@ -177,7 +182,7 @@
 //     Раскладка на планшете     ///
 ////////////////////////////////////
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width + 80px) {
   .results-example__wrapper {
     grid-template-columns: calc(35% + 127px) calc(65% - 127px);
 
@@ -188,6 +193,8 @@
 
     font-size: 16px;
     line-height: 24px;
+
+    overflow-x: hidden;
   }
 
   .results-example__heading {
@@ -199,6 +206,7 @@
   .results-example__text-block {
     grid-column: 1 / -1;
 
+    max-width: calc(1000px - 35%);
     margin-bottom: 2.32em;
   }
 
@@ -224,7 +232,7 @@
 
   .results-example__cost {
     margin: 0;
-    padding: 1.15em calc(30% - 80px) 0 17%;
+    padding: 1.15em calc(15% - 24px) 0 17%;
 
     font-size: 20px;
     text-align: right;
@@ -236,7 +244,9 @@
 
   .results-example__figure {
     grid-column: 1 / -1;
-    padding-bottom: 4.15em;
+
+    padding-top: 4em;
+    padding-bottom: calc(4% + 2.3em);
 
     background: linear-gradient(to bottom, var(--bg-main-color) 34%, var(--bg-accented-secondary-color) 34%);
   }
@@ -244,16 +254,30 @@
   .results-example__img-container {
     position: relative;
 
-    width: 100%;
-    // Высота тут временно
-    height: 563px;
+    width: 600px;
+    height: 515px;
+    margin-bottom: 2.5%;
   }
 
   .results-example__img {
+    display: block;
+
     position: absolute;
-    top: 20px;
-    left: 50px;
     width: auto;
+  }
+
+  .results-example__img--before {
+    top: 5px;
+    left: -38px;
+
+    clip-path: inset(0 calc(50% + 7px) 0 0);
+  }
+
+  .results-example__img--after {
+    top: 5px;
+    left: -38px;
+
+    clip-path: inset(0 0 0 calc(50% - 7px));
   }
 
   .results-example__figcaption {
@@ -291,7 +315,7 @@
 //     Раскладка на десктопе     ///
 ////////////////////////////////////
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width + 60px) {
   .results-example__wrapper {
     grid-template-columns: 36% 64%;
     grid-template-rows: repeat(4, min-content);
@@ -301,7 +325,9 @@
     border-top: none;
     margin: 0;
 
-    background: linear-gradient(to bottom, var(--bg-main-color) 9.95em, var(--bg-accented-main-color) 9.95em);
+    background: linear-gradient(to bottom, var(--bg-main-color) 9.9em, var(--bg-accented-main-color) 9.9em);
+
+    overflow: visible;
   }
 
   .results-example__heading {
@@ -311,6 +337,8 @@
 
   .results-example__text-block {
     grid-column: 1 / 2;
+
+    max-width: auto;
     padding: 0;
     margin: 0 0 4.23em 0;
   }
@@ -319,7 +347,7 @@
     flex-direction: row;
     grid-column: 1 / 2;
 
-    padding: 0 16.75% 0 0;
+    padding: 0 calc(30% - 58px) 0 0;
     margin: 0 0 2.4em 0;
   }
 
@@ -333,10 +361,9 @@
     display: flex;
     justify-content: space-between;
 
-    padding: 0 25.6% 0 0;
+    padding: 0 calc(43% - 76px) 0 0;
 
     text-align: left;
-
 
     br {
       display: none;
@@ -351,11 +378,26 @@
     height: 100%;
 
     background: transparent;
+    outline-offset: -2px;
   }
 
   .results-example__figcaption {
     left: 3.1%;
 
     width: calc(40% + 328px);
+  }
+
+  .results-example__img--before {
+    top: -95px;
+    left: -45px;
+
+    clip-path: inset(0 calc(50% - 20px) 0 0);
+  }
+
+  .results-example__img--after {
+    top: -96px;
+    left: -45px;
+
+    clip-path: inset(0 0 0 calc(50% + 20px));
   }
 }

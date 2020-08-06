@@ -39,7 +39,7 @@
   --page-padding: calc(11% - 15px);
 
   @media (min-width: $tablet-width) {
-    --page-padding: calc(13% - 70px);
+    --page-padding: max(calc(13% - 70px), 30px);
   }
 
   @media (min-width: $desktop-width) {

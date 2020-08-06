@@ -12,9 +12,9 @@
         <div class="page-header__header-top">
           <a class="page-header__mascot-icon">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/site-mascot-desktop.svg" sizes="70px">
-              <source media="(min-width: 768px)" srcset="img/site-mascot-tablet.svg" sizes="61px">
-              <img src="img/site-mascot-mobile.svg" alt="Талисман Cat Energy">
+              <source media="(min-width: 1200px)" srcset="img/site-mascot-desktop.svg" sizes="70px">
+              <source media="(min-width: 720px)" srcset="img/site-mascot-tablet.svg" sizes="61px">
+              <img src="img/site-mascot-mobile.svg" sizes="34px" alt="Талисман Cat Energy">
             </picture>
           </a>
           <a class="page-header__logo">
@@ -57,9 +57,9 @@
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <a class="promo__link button" href="#">Подобрать программу</a>
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x" sizes="552px">
-            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x" sizes="709px">
-            <img class="promo__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Упаковка Cat Energy Pro с вкусом курицы">
+            <source media="(min-width: 1280px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x" sizes="552px">
+            <source media="(min-width: 600px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x" sizes="709px">
+            <img class="promo__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"  sizes="280px" alt="Упаковка Cat Energy Pro с вкусом курицы">
           </picture>
         </div>
       </section>
@@ -162,9 +162,15 @@
               <label class="results-example__label" for="results-example__toggle--after">Стало</label>
             </figcaption>
             <div class="results-example__img-container">
-              <img class="results-example__img results-example__img--before results-example__img--current" src="https://via.placeholder.com/230x280" width="230" height="280" alt="Кот до Cat Energy: толстый, но солидный">
-              <img class="results-example__img results-example__img--after" src="https://via.placeholder.com/230x280" width="230" height="280" alt="Кот после Cat Energy: стройный и страшный">
-            </div>
+              <picture>
+                <source media="(min-width: 680px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x" sizes="690px">
+                <img class="results-example__img results-example__img--before results-example__img--current" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Кот до Cat Energy: толстый, но солидный">
+              </picture>
+              <picture>
+                <source media="(min-width: 680px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x" sizes="690px">
+                <img class="results-example__img results-example__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Кот после Cat Energy: стройный, но страшненький">
+              </picture>
+              </div>
           </figure>
         </div>
       </section>
@@ -191,7 +197,7 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo-container">
           <a class="page-footer__logo-link">
-            <img src="https://via.placeholder.com/120x25" height="#" width="#" alt="Cat Energy">
+            <img class="page-footer__logo-img" src="img/site-logo.svg" height="24" width="128" alt="Cat Energy">
           </a>
         </div>
         <div class="page-footer__socials-container">
@@ -208,7 +214,7 @@
           </ul>
         </div>
         <div class="page-footer__copyright-container">
-          <a class="page-footer__copyright-name" href="https://htmlacademy.ru/">HTML Academy</a>
+          <a class="page-footer__copyright-name no-wrap" href="https://htmlacademy.ru/">HTML Academy</a>
           <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/"></a>
         </div>
       </div>

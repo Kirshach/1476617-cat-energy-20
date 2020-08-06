@@ -42,7 +42,7 @@
 //     Раскладка на планшете     ///
 ////////////////////////////////////
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width + 100px) {
   .main-nav__wrapper {
     // Переменные задают паддинги для ссылок меню и элементов списка меню
     // Сумма переменных задаёт визуальное смещение меню к соответствующему макету месту
@@ -100,7 +100,7 @@
 //     Раскладка на десктопе     ///
 ////////////////////////////////////
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width + 80px) {
   .main-nav__wrapper {
     $link-sides-padding: 0.8em;
     $item-sides-padding: 0.07em;

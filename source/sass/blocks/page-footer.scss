@@ -1,5 +1,3 @@
-// .page-footer {}
-
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
@@ -10,18 +8,19 @@
 .page-footer__logo-container {
   border-bottom: 1px solid var(--hr-main-color);
   margin: 0 var(--page-padding);
-  padding: 2.32em 0;
+  padding: calc(3% + 1.1em) 0 calc(3% + 0.55em);
 }
 
 .page-footer__logo-link {
   display: block;
 
   width: min-content;
+  padding: 1em 1em 0.7em;
   margin: 0 auto;
 }
 
 .page-footer__socials-container {
-  padding: 1.33em 0 0.7em;
+  padding: 4% 0 calc(4% - 0.6em);
   margin: 0 var(--page-padding);
   border-bottom: 1px solid var(--hr-main-color);
 }
@@ -37,9 +36,9 @@
 }
 
 .page-footer__social-list-item {
-  width: 25px;
-  height: 25px;
-  margin: 0 5.2% 0.63em;
+  width: calc(5% + 2em);
+  height: 2.5em;
+  margin: 0 2.25% 0.63em;
 
   filter: grayscale(100) brightness(70%);
 }
@@ -50,7 +49,7 @@
   align-items: center;
 
   margin: 0 var(--page-padding);
-  padding: 1.55em 0;
+  padding: calc(2% + 1.2em) 0;
 }
 
 .page-footer__copyright-name {
@@ -93,32 +92,46 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 2em var(--page-padding);
+    padding: 3.5em var(--page-padding);
     margin: 0;
-
-    outline: 2px solid red;
   }
 
   .page-footer__logo-container {
+    padding: 0;
     margin: 0;
-    outline: 2px solid red;
+
+    border-bottom: none;
+  }
+
+  .page-footer__logo-link {
+    position: relative;
+    top: -2px;
+    left: -14px;
   }
 
   .page-footer__socials-container {
-    outline: 2px solid green;
     width: 60%;
+    padding: 0;
     margin: 0;
+
+    border-bottom: none;
+  }
+
+  .page-footer__socials-list {
+    position: relative;
+    left: 13px;
   }
 
   .page-footer__copyright-container {
-    position: static;
+    position: relative;
+    top: -4px;
+    left: 7px;
     justify-content: end;
 
-    // Временно ????????
-    width: 200px;
-    //
+    width: min-content;
+    min-width: 190px;
+    padding: 0;
     margin: 0;
-    outline: 2px solid blue;
   }
 
   .page-footer__social-list-item {
@@ -130,13 +143,42 @@
 
   .page-footer__copyright-name {
     position: static;
-    outline: 2px solid red;
   }
 
   .page-footer__copyright-logo {
     position: static;
-    outline: 2px solid red;
 
-    margin-left: 1.2em;
+    margin-left: 1.05em;
+  }
+
+  .contact-us__mini-map {
+    width: 120px;
+  }
+}
+
+
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrapper {
+    padding: 3.58em var(--page-padding);
+  }
+
+  .page-footer__socials-container {
+    max-width: 40%;
+  }
+
+  .page-footer__socials-list {
+    left: 11px;
+  }
+
+  .page-footer__social-list-item {
+    margin-right: 0.5em;
+  }
+
+  .page-footer__copyright-container {
+    top: -3px;
   }
 }
