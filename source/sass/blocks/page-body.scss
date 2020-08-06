@@ -37,8 +37,13 @@
     // 2) картинки 720px, располагающейся с правого края страницы, но не дальше края svg
     background-image: url("../img/index-background-desktop@1x.jpg"), url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' preserveAspectRatio='none' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='50%25' y='0' width='50%25' height='697' fill='%2365a93c'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
+<<<<<<< HEAD
     background-position: top left unquote("min(100%, calc(50% + 740px))"), top center;
     background-size: 720px auto, unquote("min(100%, 2200px)") auto;
+=======
+    background-position: top left unquote('min(100%, calc(50% + 740px))'), top center;
+    background-size: 720px auto, unquote('min(100%, 2200px)') auto;
+>>>>>>> 51d433d7431b0762d7df3bdf16be993ee6bbad6d
   }
 
   @media (min-resolution: 2dppx) {

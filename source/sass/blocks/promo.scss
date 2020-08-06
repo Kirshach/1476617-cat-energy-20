@@ -80,7 +80,11 @@
     position: relative;
 
     // Отступ сверху тянется, но не меньше 2.25em
+<<<<<<< HEAD
     --padding-top: max(calc(12% - 4.3em), 2.25em);
+=======
+    --padding-top: max( calc(12% - 4.3em), 2.25em);
+>>>>>>> 51d433d7431b0762d7df3bdf16be993ee6bbad6d
 
     padding: var(--padding-top) 15.2% calc(655px - 17%);
     margin-bottom: 0;
