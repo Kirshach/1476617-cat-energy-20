@@ -1,9 +1,9 @@
-$categories-internal-padding: calc(20% - 36px);
-
-// .categories {}
+// Переменная вычисляет индивидуальные паддинги составных элементов пунктов списка.
+// У самого элемента списка отсутствуют паддинги ввиду нюансов позиционирования
+// иконки элемента (её положение должно зависеть от высоты categories__heading)
+$categories-internal-padding: calc(10% - 8px);
 
 .categories__wrapper {
-  padding-top: 1.57em;
   margin: 0 var(--page-padding) 0.7em;
 
   word-wrap: break-word;
@@ -49,12 +49,12 @@ $categories-internal-padding: calc(20% - 36px);
   margin: 0;
 
   &--weight-loss {
-    background: url("../img/icon-cat-slim.svg") calc(20% - 25px) 50% no-repeat;
+    background: url("../img/icon-cat-slim.svg") 9.5% 50% no-repeat;
     background-size: 51px auto;
   }
 
   &--weight-gain {
-    background: url("../img/icon-cat-pro.svg") calc(20% - 30px) 50% no-repeat;
+    background: url("../img/icon-cat-pro.svg") calc(10% - 8px) 52% no-repeat;
     background-size: 67px auto;
   }
 
@@ -89,22 +89,21 @@ $categories-internal-padding: calc(20% - 36px);
   background: url("../img/icon-arrow.svg") no-repeat right center;
 }
 
-
 ////////////////////////////////////
 //     Раскладка на планшете     ///
 ////////////////////////////////////
 
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width + 100px) {
   $categories-internal-padding: calc(20% - 36px);
 
   .categories__wrapper {
-    margin-bottom: 1em;
+    margin-bottom: calc(5% - 1.62em);
   }
 
   .categories__item {
     padding: calc(3% + 56px) calc(20% - 89px) 4.1%;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
 
     &::after {
       display: none;
@@ -163,7 +162,7 @@ $categories-internal-padding: calc(20% - 36px);
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+@media (min-width: $tablet-width + 100) and (max-width: $desktop-width - 1) {
   .categories__item--weight-loss {
     .categories__description {
       max-width: calc(67% - 30px);

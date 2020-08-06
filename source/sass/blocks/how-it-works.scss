@@ -1,12 +1,9 @@
-// .how-it-works {}
+.how-it-works__wrapper {
+  margin: 0 var(--page-padding) calc(3% + 2.35em);
+}
 
 .how-it-works__heading {
   margin: 0 var(--page-padding) 1.11em;
-}
-
-.how-it-works__wrapper {
-
-  margin: 0 var(--page-padding) 3em;
 }
 
 .how-it-works__list {
@@ -59,7 +56,6 @@
   position: relative;
   top: -1px;
 
-  // max-width: calc(100% - 220px);
   margin: 0;
 }
 

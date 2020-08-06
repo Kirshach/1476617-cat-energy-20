@@ -59,7 +59,7 @@
 //     Раскладка на планшете      //
 ////////////////////////////////////
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width + 100px) {
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -102,7 +102,7 @@
 //     Раскладка на десктопе      //
 ////////////////////////////////////
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width + 80px) {
   .page-header__wrapper {
     padding: 3.8em var(--page-padding) 1.5em;
   }

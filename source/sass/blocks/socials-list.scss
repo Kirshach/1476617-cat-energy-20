@@ -9,13 +9,17 @@
   height: 100%;
 
   &--vk {
-    background: url("../img/icon-vk.svg") no-repeat 0 50%;
-    background-size: 90%;
+    background: url("../img/icon-vk.svg") no-repeat 50% 50%;
+    background-size: 52%;
+
+    @media (min-width: $tablet-width) {
+      background-size: 91%;
+    }
   }
 
   &--instagram {
     background: url("../img/icon-insta.svg") no-repeat 50% 60%;
-    background-size: 65%;
+    background-size: 38%;
 
     @media (min-width: $tablet-width) {
       background-size: 72%;
@@ -23,8 +27,8 @@
   }
 
   &--fb {
-    background: url("../img/icon-fb.svg") no-repeat 0 50%;
-    background-size: 88%;
+    background: url("../img/icon-fb.svg") no-repeat 40% 50%;
+    background-size: 53%;
 
     @media (min-width: $tablet-width) {
       background-size: 90%;
