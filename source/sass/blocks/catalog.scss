@@ -28,7 +28,7 @@
   .catalog__list {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 8.5%;
-    grid-row-gap: calc(5% - 5.0em);
+    grid-row-gap: calc(5% - 5em);
 
     margin: 0 var(--page-padding);
   }
