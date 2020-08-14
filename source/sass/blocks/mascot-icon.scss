@@ -1,0 +1,63 @@
+.mascot-icon__base-icon {
+  transform: translateX(-19.5px) translateY(-2px);
+}
+
+.mascot-icon__tablet-bg {
+  display: none;
+}
+
+.mascot-icon__tablet-add-up {
+  display: none;
+}
+
+.mascot-icon__desktop-add-up {
+  display: none;
+}
+
+
+////////////////////////////////////
+//     Раскладка на планшете      //
+////////////////////////////////////
+
+@media (min-width: $tablet-width + 140px) {
+  .mascot-icon__mobile-bg {
+    display: none;
+  }
+
+  .mascot-icon__tablet-bg {
+    display: block;
+    transform: scale(0.87);
+  }
+
+  .mascot-icon__base-icon {
+    transform: scale(0.87);
+  }
+
+  .mascot-icon__tablet-add-up {
+    display: block;
+    transform: scale(0.87);
+  }
+}
+
+////////////////////////////////////
+//     Раскладка на десктопе      //
+////////////////////////////////////
+
+@media (min-width: $desktop-width + 80px) {
+  .mascot-icon__tablet-bg {
+    display: block;
+    transform: none;
+  }
+
+  .mascot-icon__base-icon {
+    transform: none;
+  }
+
+  .mascot-icon__tablet-add-up {
+    transform: none;
+  }
+
+  .mascot-icon__desktop-add-up {
+    display: block;
+  }
+}

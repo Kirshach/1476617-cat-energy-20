@@ -1,22 +1,231 @@
-// .product-card {}
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 5.2%;
 
-.product-card__heading {
-  @include uppercase-heading(16px, 125%);
+  padding: 0 var(--page-padding) calc(5% + 0.67em);
+  border-bottom: 1px solid var(--product-card-border);
+
+  color: var(--text-main-color);
+}
+
+.product-card__img-container {
+  overflow: hidden;
+}
+
+.product-card__img {
+  display: block;
+
+  width: calc(60% + 55px);
+  margin: 0 auto;
+  height: auto;
 }
 
 .product-card__description {
+  padding: calc(25% - 1.28em) calc(33% - 3.9em) calc(15% - 0.7em);
+  margin: 0;
+
   font-weight: normal;
   font-size: 12px;
   line-height: 133%;
+
+  @media (min-width: $mobile-width + 140px) {
+    font-size: 13px;
+  }
 }
 
-// .product-card__description-item {}
+.product-card__heading {
+  @include uppercase-heading(16px, 125%);
 
-// .product-card__description-term {}
+  width: 65%;
+  padding: 0;
+  margin: 0 0 calc(50% - 3.49em);
+
+  color: var(--heading-main-color);
+
+  br {
+    display: none;
+  }
+}
+
+.product-card__description-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card__description-term {
+  flex-shrink: 0;
+  max-width: 60%
+}
 
 .product-card__description-definition {
+  flex-shrink: 0;
+
+  max-width: 40%;
   padding-left: 0;
   margin-left: 0;
 }
 
-// .product-card__order-button {}
+.product-card__order-button {
+  @include uppercase-heading(16px, 125%);
+
+  grid-column: 1 / -1;
+
+  padding: calc(2% + 0.27em) 1.5em;
+  margin: 0 calc(15% - 2.62em)
+}
+
+//
+// Раскладка карточки "Показать все"
+//
+
+.product-card--show-all {
+  position: relative;
+  padding: calc(15% + 2.2em) var(--page-padding) calc(5% + 1.28em);
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    top: calc(30% - 23px);
+    left: calc(50% - 15px);
+
+    width: 30px;
+    height: 2px;
+    background-color: var(--hr-main-color);
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.product-card--show-all__heading {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  padding: 0;
+  margin: 0 0 1.1% 0;
+
+  text-align: center;
+}
+
+.product-card--show-all__description {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  padding: 0;
+  margin: 0 0 5.85%;
+  text-align: center;
+}
+
+// .product-card--show-all__order-button {}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+@media (min-width: $tablet-width) {
+  .product-card {
+    grid-template-columns: 1fr;
+    grid-row-gap: 0;
+
+    min-height: 400px;
+    padding: 7% calc(25% - 3.08em) 7%;
+
+    background-image: linear-gradient(var(--bg-main-color) 19.5%, var(--bg-accented-main-color) 19.5%);
+  }
+
+  .product-card__img-container {
+    width: 100%;
+    min-height: 0px;
+    margin: 0 0 8.5%;
+  }
+
+  .product-card__img {
+    width: 78%;
+    height: min-content;
+    margin: 0 auto;
+  }
+
+  .product-card__heading {
+    max-width: calc(50% + 60px);
+    margin: 0 auto 5.3%;
+
+    font-size: 20px;
+    line-height: 120%;
+
+    text-align: center;
+
+    br {
+      display: block;
+    }
+  }
+
+  .product-card__description {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 calc(7% + 1em);
+
+    font-size: 16px;
+    line-height: 126%;
+  }
+
+  .product-card__description-list {
+    font-size: 16px;
+  }
+
+  .product-card__description-item {
+    padding: 0.33em 0;
+    border-bottom: 1px solid var(--border-secondary-color);
+  }
+
+  .product-card__order-button {
+    margin: 0 0 6.8%;
+  }
+
+  //
+  // Раскладка карточки "Показать все"
+  //
+
+  .product-card--show-all {
+    grid-template-rows: 25.4% 45% 29.6%;
+    padding: calc(40% + 2.08em) 0 0;
+    border: 2px solid var(--bg-accented-main-color);
+    margin-top: calc(15% + 56px);
+
+    background: transparent;
+
+    &::before, &::after {
+      top: calc(20% - 6px);
+      left: calc(50% - 30px);
+
+      width: 60px;
+    }
+  }
+
+  .product-card--show-all__heading {
+    max-width: 8em;
+    height: min-content;
+    margin: 0 auto 0;
+
+    line-height: 110%;
+    text-align: center;
+  }
+
+  .product-card--show-all__description {
+    grid-column: 1 / -1;
+
+    max-width: 12em;
+    padding: 0;
+    margin: 0 auto;
+
+    line-height: 110%;
+    text-align: center;
+  }
+
+  .product-card--show-all__order-button {
+    height: min-content;
+    margin: calc(1.1em - 5%) 11% 0;
+  }
+}

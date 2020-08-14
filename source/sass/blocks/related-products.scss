@@ -1,24 +1,60 @@
 // .related-products {}
 
 .related-products__wrapper {
-  margin: 0 var(--page-padding);
+  display: flex;
+  flex-direction: column;
+  padding: calc(5% + 0.85em) var(--page-padding) 0;
+  margin: 0 0 calc(5% + 1.7em);
+  overflow: hidden;
 }
 
 .related-products__heading {
-  width: 100%;
+  align-self: start;
+  display: inline-block;
+  position: relative;
+
+  padding: 0 0.93em 0 var(--page-padding);
+  margin: 0 0 calc(5% + 0.84em) calc(-1 * var(--page-padding));
+  background-color: var(--bg-main-color);
+
+  font-family: $heading-font-stack;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 100%;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: calc(50% + 0.13em);
+    left: var(--page-padding);
+
+    width: 100vw;
+    height: 2px;
+    background-color: var(--special-color);
+  }
 }
 
 .related-products__list {
   @include default-list-style;
+
+  font-size: 14px;
+  line-height: 125%;
+
+  border-top: 1px solid var(--border-secondary-color);
 }
 
 .related-products__item {
-  font-size: 14px;
-  line-height: 100%;
+  padding: calc(10% - 1.26em) 0 calc(10% - 0.79em);
+  border-bottom: 1px solid var(--border-secondary-color);
 }
 
 .related-products__name {
-  @include uppercase-heading(16px);
+  @include uppercase-heading(16px, 129%);
+
+  padding: 0;
+  margin: 0 0 calc(10% - 1.15em) 0.1em;
 
   color: var(--heading-secondary-color);
 }
@@ -26,14 +62,24 @@
 .related-products__description {
   display: flex;
   justify-content: space-between;
+
+  padding: 0;
+  margin: 0 0 calc(10% - 1.08em);
 }
 
-// .related-products__quantity {}
+.related-products__quantity {
+  margin: 0;
+}
 
-// .related-products__price {}
+.related-products__price {
+  margin: 0;
+}
 
 .related-products__order-button {
+  @include uppercase-heading(16px, 129%);
+
   width: 100%;
+  padding: calc(3% + 0.08em) 0;
 }
 
 
@@ -41,8 +87,11 @@
 //     Раскладка на планшете     ///
 ////////////////////////////////////
 
-
 @media (min-width: $tablet-width) {
+  .related-products__heading {
+    font-size: 36px;
+  }
+
   .related-products__item {
     display: flex;
     flex-wrap: wrap;

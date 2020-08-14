@@ -1,12 +1,47 @@
 .special-offer {
-  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center top;
+  position: relative;
+
+  padding: 45.2% 0;
+  margin: 0 var(--page-padding) calc(8% + 0.67em);
+  background: var(--special-color) url("../img/gift-photo-mobile@1x.jpg") no-repeat center top;
+  background-size: cover;
+
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(15% + 21px);
+    left: 40%;
+
+    width: calc(30% - 27px);
+    height: 25%;
+    background: url("../img/icon-gift.svg") no-repeat 0 0;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .special-offer__offer-text {
+  position: absolute;
+  top: calc(70% - 31px);
+  left: 19.5%;
+  width: 60%;
+
   font-size: 16px;
   line-height: 125%;
 
   text-align: center;
+
+  @media (min-width: $mobile-width + 100px) {
+    font-size: 17px;
+  }
+
+  @media (min-width: $mobile-width + 180px) {
+    font-size: 18px;
+  }
 
   color: var(--text-alt-color);
 }

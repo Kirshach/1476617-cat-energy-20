@@ -8,12 +8,10 @@
   overflow-wrap: break-word;
 
   color: var(--heading-main-color);
+}
 
-  &--second-level {
-    font-size: 24px;
-  }
-
-  @media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) {
+  .section-heading {
     font-size: 60px;
   }
 }

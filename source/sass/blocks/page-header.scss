@@ -1,7 +1,3 @@
-// .page-header {}
-
-// .page-header__mascot-icon {}
-
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
@@ -14,19 +10,32 @@
   background: transparent;
 }
 
-.page-header__logo {
-  position: relative;
-  left: 3px;
-  top: 3px;
-}
-
 .page-header__header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
-  padding: 0.8em var(--page-padding);
+  padding: 0.88em var(--page-padding);
+}
+
+.page-header__mascot-link {
+  position: relative;
+  top: -2px;
+
+  width: 34px;
+  height: 38px;
+}
+
+.page-header__mascot-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.page-header__site-logo {
+  position: relative;
+  left: 2px;
+  top: 2px;
 }
 
 .page-header__hamburger-toggler {
@@ -59,15 +68,35 @@
 //     Раскладка на планшете      //
 ////////////////////////////////////
 
-@media (min-width: $tablet-width + 100px) {
+@media (min-width: $tablet-width + 140px) {
+
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
 
-    padding: 1.9em var(--page-padding);
+    padding: 2em var(--page-padding);
   }
 
-  .page-header__logo {
+  .page-header__header-top {
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: auto;
+    padding: 0;
+    padding-right: 20px;
+  }
+
+  .page-header__mascot-link {
+    top: -4px;
+
+    width: 61px;
+    height: 51px;
+  }
+
+  .page-header__site-logo {
     left: 11px;
     top: 1px;
   }
@@ -84,18 +113,6 @@
   .page-header__hamburger-toggler {
     display: none;
   }
-
-  .page-header__header-top {
-    flex-shrink: 0;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: auto;
-    padding: 0;
-    padding-right: 20px;
-  }
 }
 
 ////////////////////////////////////
@@ -104,14 +121,21 @@
 
 @media (min-width: $desktop-width + 80px) {
   .page-header__wrapper {
-    padding: 3.8em var(--page-padding) 1.5em;
+    padding: 3.9em var(--page-padding) 1.7em;
   }
 
   .page-header__main-page-wrapper {
     color: var(--text-alt-color);
   }
 
-  .page-header__logo {
+  .page-header__mascot-link {
+    top: -2px;
+
+    width: 70px;
+    height: 59px;
+  }
+
+  .page-header__site-logo {
     left: 13px;
     top: 3px;
   }

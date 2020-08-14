@@ -6,9 +6,9 @@
 
   background-color: var(--special-color);
   color: var(--text-alt-color);
+}
 
-  &--alt-style {
-    background-color: var(--bg-accented-main-color);
-    color: var(--text-main-color);
-  }
+.button--alt-style {
+  background-color: var(--bg-accented-main-color);
+  color: var(--text-main-color);
 }

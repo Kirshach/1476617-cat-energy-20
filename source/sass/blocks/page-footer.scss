@@ -20,7 +20,7 @@
 }
 
 .page-footer__socials-container {
-  padding: 4% 0 calc(4% - 0.6em);
+  padding: 4.2% 0 calc(4% - 0.6em);
   margin: 0 var(--page-padding);
   border-bottom: 1px solid var(--hr-main-color);
 }
@@ -38,9 +38,7 @@
 .page-footer__social-list-item {
   width: calc(5% + 2em);
   height: 2.5em;
-  margin: 0 2.25% 0.63em;
-
-  filter: grayscale(100) brightness(70%);
+  margin: 0 calc(8% - 1.14em) 0.63em;
 }
 
 .page-footer__copyright-container {
@@ -70,15 +68,11 @@
 
 .page-footer__copyright-logo {
   position: relative;
-  top: -5px;
-  left: 9px;
+  top: -1px;
+  left: 17px;
 
   width: 44px;
   height: 45px;
-
-  background: url("../img/htmlacademy.svg") no-repeat 50% 50%;
-
-  filter: grayscale(100) brightness(70%);
 }
 
 
@@ -92,7 +86,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 3.5em var(--page-padding);
+    padding: 3.3em var(--page-padding);
     margin: 0;
   }
 
@@ -124,8 +118,8 @@
 
   .page-footer__copyright-container {
     position: relative;
-    top: -4px;
-    left: 7px;
+    top: 3px;
+    left: 16px;
     justify-content: end;
 
     width: min-content;
@@ -135,20 +129,20 @@
   }
 
   .page-footer__social-list-item {
-    height: 33px;
-    width: 33px;
+    height: 50px;
+    width: 50px;
 
-    margin: 0 2.1% 0.63em;
+    margin: 0 calc(6% - 1.52em) 0.63em;
   }
 
   .page-footer__copyright-name {
     position: static;
+    margin: 0 1.4em 0.9em 0;
   }
 
   .page-footer__copyright-logo {
     position: static;
-
-    margin-left: 1.05em;
+    margin: 0;
   }
 
   .contact-us__mini-map {
@@ -163,7 +157,7 @@
 
 @media (min-width: $desktop-width) {
   .page-footer__wrapper {
-    padding: 3.58em var(--page-padding);
+    padding: 3.3em var(--page-padding);
   }
 
   .page-footer__socials-container {
@@ -171,14 +165,14 @@
   }
 
   .page-footer__socials-list {
-    left: 11px;
+    left: 13px;
   }
 
   .page-footer__social-list-item {
-    margin-right: 0.5em;
+    margin: 0 calc(4% - 1.4em) 0.63em;
   }
 
   .page-footer__copyright-container {
-    top: -3px;
+    top: 5px;
   }
 }

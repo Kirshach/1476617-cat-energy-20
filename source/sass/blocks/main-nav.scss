@@ -42,7 +42,7 @@
 //     Раскладка на планшете     ///
 ////////////////////////////////////
 
-@media (min-width: $tablet-width + 100px) {
+@media (min-width: $tablet-width + 140px) {
   .main-nav__wrapper {
     // Переменные задают паддинги для ссылок меню и элементов списка меню
     // Сумма переменных задаёт визуальное смещение меню к соответствующему макету месту
@@ -52,6 +52,7 @@
     position: relative;
     left: $link-sides-padding + $item-sides-padding;
 
+    margin: 0;
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
@@ -59,7 +60,6 @@
     .site-list__item {
       width: auto;
       max-width: 40%;
-      // outline: 2px solid blue;
       padding: 0 $item-sides-padding;
       border: none;
 
