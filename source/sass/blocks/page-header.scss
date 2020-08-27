@@ -44,6 +44,7 @@
 }
 
 .page-header__site-logo {
+  @include accessible-focus(30px, 10px);
   position: relative;
   left: 3px;
   top: 1px;
@@ -118,14 +119,7 @@
   transition: opacity 0.2s ease-in, font-size 0.5s;
 
   &--closed {
-    opacity: 0;
-    font-size: 0;
-    transition: opacity 0.1s ease-in 0.1s, font-size 0.5s;
-
-    .site-list__item {
-      border-color: transparent;
-      border-width: 0;
-    }
+    display: none;
   }
 }
 
@@ -198,6 +192,10 @@
 
     font-size: 18px;
     line-height: 133%;
+
+    &--closed {
+      display: block;
+    }
   }
 }
 
