@@ -12,11 +12,23 @@
 }
 
 .page-footer__logo-link {
+  @include accessible-focus(25px);
   display: block;
 
   width: min-content;
   padding: 1em 1em 0.7em;
   margin: 0 auto;
+
+  transition: opacity 0.1s;
+
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.07s ease-out;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__socials-container {
@@ -39,6 +51,17 @@
   width: calc(5% + 2em);
   height: 2.5em;
   margin: 0 calc(8% - 1.14em) 0.63em;
+
+  transition: filter 0.1s;
+
+  &:hover {
+    filter: invert(62%) sepia(20%) saturate(2523%) hue-rotate(54deg) brightness(100%) contrast(95%);
+    transition: filter 0.07s ease-out;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__copyright-container {
@@ -48,6 +71,10 @@
 
   margin: 0 var(--page-padding);
   padding: calc(2% + 1.2em) 0;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__copyright-name {
@@ -64,6 +91,11 @@
 
   text-decoration: none;
   color: var(--text-main-color);
+
+  &:hover + .page-footer__copyright-logo {
+    filter: invert(62%) sepia(20%) saturate(2523%) hue-rotate(54deg) brightness(100%) contrast(95%);
+    transition: filter 0.07s ease-out;
+  }
 }
 
 .page-footer__copyright-logo {
@@ -73,6 +105,13 @@
 
   width: 44px;
   height: 45px;
+
+  transition: filter 0.1s;
+
+  &:hover {
+    filter: invert(62%) sepia(20%) saturate(2523%) hue-rotate(54deg) brightness(100%) contrast(95%);
+    transition: filter 0.07s ease-out;
+  }
 }
 
 
@@ -132,21 +171,19 @@
     height: 50px;
     width: 50px;
 
-    margin: 0 calc(6% - 1.52em) 0.63em;
+    margin: 0 -1px 0.63em;
   }
 
   .page-footer__copyright-name {
     position: static;
     margin: 0 1.4em 0.9em 0;
+
+    @include accessible-focus(30px, 7px);
   }
 
   .page-footer__copyright-logo {
     position: static;
     margin: 0;
-  }
-
-  .contact-us__mini-map {
-    width: 120px;
   }
 }
 

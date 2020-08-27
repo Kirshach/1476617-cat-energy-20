@@ -7,7 +7,9 @@
   --border-main-color: #e6e6e6;
   --border-secondary-color: #cdcdcd;
 
-  --box-shadow-main-color: #d5d5d5;
+  --box-shadow-main-color: #d2d2d2;
+
+  --error-color: #ff8282;
 
   --heading-main-color: #000000;
   --heading-secondary-color: #222222;
@@ -17,10 +19,11 @@
   --slider-bg-color: #dcdcdc;
 
   --special-color: #68b738;
+  --special-color-hover: #5eaa2f;
 
   --text-main-color: #444444;
   --text-alt-color: #ffffff;
-
+  --text-alt-color-active: rgba(255, 255, 255, 0.3);
 
   // Уникальные цвета блоков
   --product-card-border: #ebebeb;

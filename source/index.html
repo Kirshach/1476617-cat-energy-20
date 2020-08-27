@@ -19,12 +19,12 @@
               <g class="mascot-icon__desktop-add-up" fill="#FDC305"><path d="M65.2 3.5l-8.4 9.3-1.3-2L63.7 0l1.5 3.5zM62.7 17.1l5.5-4-.8-3.8-5.4 4.8.7 3zM60 49l6 3.1 3-2.3-6.6-2.7-2.5 1.9zM2 6l3-3.4 9.3 9-1.2 2.2L1.9 5.9zM7.4 16.1l-4.7-3-2.4 3.8 5.1 2.4 2-3.2zM14 52.1l-4.6 3.3 2.8 3.6 4-4-2.3-2.9z"/></g>
             </svg>
           </a>
-          <a class="page-header__site-logo">
+          <a class="page-header__site-logo" tabindex="-1">
             <img class="page-header__logo-img" src="img/site-logo.svg" height="18" width="101" alt="Cat Energy">
           </a>
           <button class="page-header__hamburger-toggler hamburger-toggler" type="button" aria-label="Открыть меню">
             <svg class="hamburger-toggler__svg" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="black">
-              <rect class="hamburger-toggler__top-bar" x="0" y="3" width="24" height="2"/><rect class="hamburger-toggler__middle-bar" x="0" y="11" width="24" height="2"/><rect class="hamburger-toggler__bottom-bar" x="0" y="19" width="24" height="2"/>
+              <rect class="hamburger-toggler__top-bar" x="0" y="4" width="24" height="2"/><rect class="hamburger-toggler__middle-bar" x="0" y="12" width="24" height="2"/><rect class="hamburger-toggler__bottom-bar" x="0" y="20" width="24" height="2"/>
             </svg>
           </button>
         </div>
@@ -160,7 +160,7 @@
               </ul>
               <div class="results-example__desktop-range single-value-slider">
                 <div class="single-value-slider__bg-rail"></div>
-                <div class="single-value-slider__knob"></div>
+                <div class="single-value-slider__knob" tabindex="0"></div>
               </div>
               <label class="results-example__label" for="results-example__toggle--after">Стало</label>
             </figcaption>
@@ -193,9 +193,7 @@
             </address>
           </header>
           <div class="contact-us__mini-map-container">
-            <a class="contact-us__open-map" href="#">
-              <img class="contact-us__mini-map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Наше местоположение на карте">
-            </a>
+            <div class="contact-us__mini-map"></div>
           </div>
         </div>
       </section>
@@ -234,7 +232,7 @@
         </div>
         <div class="page-footer__copyright-container">
           <a class="page-footer__copyright-name no-wrap" href="https://htmlacademy.ru/">HTML Academy</a>
-          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/">
+          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/" tabindex="-1">
             <svg width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <use href="img/sprite.svg#icon-html-academy">
             </svg>
@@ -242,5 +240,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/script-min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbusCN1btYjfmLqlR4L79pR2t98t7BTMA&callback=initMap" async defer></script>
   </body>
 </html>

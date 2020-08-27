@@ -16,15 +16,26 @@
   align-items: center;
 
   width: 100%;
-  padding: 0.88em var(--page-padding);
+  padding: 1em var(--page-padding) 0.8em;
 }
 
 .page-header__mascot-link {
   position: relative;
-  top: -2px;
+  top: -3px;
 
   width: 34px;
   height: 38px;
+
+  transition: opacity 0.1s;
+
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.02s;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__mascot-icon {
@@ -34,16 +45,19 @@
 
 .page-header__site-logo {
   position: relative;
-  left: 2px;
-  top: 2px;
+  left: 3px;
+  top: 1px;
+
+  transition: opacity 0.1s;
 }
 
 .page-header__hamburger-toggler {
+  display: none;
+  position: relative;
+  top: -4px;
   // Переменная задаёт размер внутреннего поля для тогглера меню
   // и используется в т.ч. для смещения его в соответствующее макету место
   $toggler-padding: 8px;
-
-  position: relative;
   left: $toggler-padding;
 
   width: 24px + ($toggler-padding * 2);
@@ -53,6 +67,45 @@
 
   background: transparent;
 
+  &--js-on {
+    display: block;
+  }
+
+  .hamburger-toggler__top-bar,
+  .hamburger-toggler__middle-bar,
+  .hamburger-toggler__bottom-bar {
+    height: 1.5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger-toggler__middle-bar {
+    width: 0;
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  .hamburger-toggler__top-bar {
+    width: 25px;
+    transform: translate(7px, 2px) rotate(46.5deg);
+    transform-origin: top left;
+  }
+
+  .hamburger-toggler__bottom-bar {
+    width: 25px;
+    transform: translate(6px, 2px) rotate(-47deg);
+    transform-origin: bottom left;
+  }
+
+  &--closed {
+    .hamburger-toggler__top-bar,
+    .hamburger-toggler__middle-bar,
+    .hamburger-toggler__bottom-bar {
+      transform: none;
+      opacity: 1;
+      width: 24px;
+    }
+  }
+
   .hamburger-toggler__svg {
     width: 24px;
     height: 24px;
@@ -60,9 +113,21 @@
 }
 
 .page-header__main-nav {
+  @include uppercase-heading (20px, 125%);
   width: 100%;
-}
+  transition: opacity 0.2s ease-in, font-size 0.5s;
 
+  &--closed {
+    opacity: 0;
+    font-size: 0;
+    transition: opacity 0.1s ease-in 0.1s, font-size 0.5s;
+
+    .site-list__item {
+      border-color: transparent;
+      border-width: 0;
+    }
+  }
+}
 
 ////////////////////////////////////
 //     Раскладка на планшете      //
@@ -89,10 +154,28 @@
   }
 
   .page-header__mascot-link {
+    @include accessible-focus(45px, 17px);
+
+    z-index: 1;
     top: -4px;
 
-    width: 61px;
+    width: 201px;
     height: 51px;
+    padding-right: 130px;
+    margin-right: -130px;
+
+    &[href] {
+      cursor: pointer;
+    }
+
+    &:hover + .page-header__site-logo {
+      opacity: 0.8;
+      transition: opacity 0.02s;
+    }
+
+    &:active + .page-header__site-logo {
+      opacity: 0.6;
+    }
   }
 
   .page-header__site-logo {
@@ -105,12 +188,16 @@
     height: 19px;
   }
 
-  .page-header__main-nav {
-    width: auto;
-  }
-
   .page-header__hamburger-toggler {
     display: none;
+  }
+
+  .page-header__main-nav {
+    width: auto;
+    opacity: 1;
+
+    font-size: 18px;
+    line-height: 133%;
   }
 }
 
@@ -130,7 +217,6 @@
   .page-header__mascot-link {
     top: -2px;
 
-    width: 70px;
     height: 59px;
   }
 
@@ -146,5 +232,7 @@
 
   .page-header__main-nav {
     max-width: 50%;
+    font-size: 20px;
+    line-height: 30px;
   }
 }

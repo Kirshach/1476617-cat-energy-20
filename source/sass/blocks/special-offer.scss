@@ -1,8 +1,7 @@
 .special-offer {
   position: relative;
 
-  padding: 45.2% 0;
-  margin: 0 var(--page-padding) calc(8% + 0.67em);
+  padding: 51.8% 0;
   background: var(--special-color) url("../img/gift-photo-mobile@1x.jpg") no-repeat center top;
   background-size: cover;
 
@@ -11,12 +10,16 @@
   &::after {
     content: "";
     position: absolute;
-    top: calc(15% + 21px);
-    left: 40%;
+    top: calc(15% + 15px);
+    left: 36%;
 
-    width: calc(30% - 27px);
-    height: 25%;
-    background: url("../img/icon-gift.svg") no-repeat 0 0;
+    width: 28%;
+    height: 27.5%;
+
+    background-image: url("../img/bg-icon-gift.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   @media (min-resolution: 2dppx) {
@@ -32,8 +35,9 @@
 
   font-size: 16px;
   line-height: 125%;
-
   text-align: center;
+
+  color: var(--text-alt-color);
 
   @media (min-width: $mobile-width + 100px) {
     font-size: 17px;
@@ -42,6 +46,89 @@
   @media (min-width: $mobile-width + 180px) {
     font-size: 18px;
   }
+}
 
-  color: var(--text-alt-color);
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
+@media (min-width: $tablet-width) {
+  .special-offer {
+    padding: 13% 0;
+    margin: 0 var(--page-padding) calc(8% + 0.9em);
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+
+    &::after {
+      top: calc(30% - 3px);
+      left: 11%;
+
+      width: calc(20% - 61px);
+      height: 50%;
+    }
+  }
+
+  .special-offer__offer-text {
+    top: calc(50% - 2.8em);
+    left: calc(70% - 72px);
+
+    width: 14em;
+
+    font-size: 16px;
+    text-align: left;
+
+    @media (min-width: $tablet-width + 300px) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $tablet-width + 560px) {
+      font-size: 20px;
+    }
+  }
+}
+
+
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
+
+@media (min-width: $desktop-width - 100px) {
+  .special-offer {
+    grid-column: 2 / 3;
+
+    width: auto;
+    padding: 0;
+    margin: 0;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-position: center top;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+
+    &::after {
+      top: 19.5%;
+      left: 34%;
+
+      width: 33%;
+      height: 31%;
+    }
+  }
+
+  .special-offer__offer-text {
+    top: 59%;
+    left: 0%;
+
+    width: 100%;
+
+    font-size: 16px;
+
+    text-align: center;
+  }
 }

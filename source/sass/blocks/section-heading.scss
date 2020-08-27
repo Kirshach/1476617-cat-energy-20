@@ -10,8 +10,67 @@
   color: var(--heading-main-color);
 }
 
+.section-heading--second-level {
+  display: inline-block;
+  position: relative;
+
+  padding: 0 0.92em 0 0;
+
+  font-size: 24px;
+  line-height: 108%;
+
+  background-color: var(--bg-main-color);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0.67em;
+
+    height: 2px;
+    width: 100vw;
+    background-color: var(--special-color);
+  }
+
+  &::after {
+    left: 100%;
+  }
+}
+
+
+////////////////////////////////////
+//     Раскладка на планшете     ///
+////////////////////////////////////
+
 @media (min-width: $tablet-width) {
   .section-heading {
     font-size: 60px;
+  }
+
+  .section-heading--second-level {
+    padding: 0;
+    margin-left: -0.06em;
+
+    font-size: 36px;
+
+    &::before {
+      right: calc(100% + 1.1em);
+    }
+
+    &::after {
+      left: calc(100% + 1.15em);
+    }
+  }
+}
+
+
+////////////////////////////////////
+//     Раскладка на десктопе     ///
+////////////////////////////////////
+
+@media (min-width: $desktop-width - 100px) {
+  .section-heading--second-level {
+    margin-left: 0;
   }
 }

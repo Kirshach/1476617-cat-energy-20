@@ -13,3 +13,20 @@
 
   text-transform: uppercase;
 }
+
+@mixin accessible-focus($outline-start: 20px, $outline-end: 0, $outline-width: 2px) {
+  // outline-start и outline-end задают начальную и конечную анимацию обводки
+  outline: $outline-width solid transparent;
+  outline-offset: $outline-start;
+
+  &:focus {
+    outline-offset: $outline-end;
+    outline-color: var(--text-main-color);
+
+    transition: outline-color 0.15s, outline-offset 0.15s ease-out;
+  }
+
+  &:focus:not(.focus-visible) {
+    outline: none;
+  }
+}

@@ -307,6 +307,10 @@
     line-height: 160%;
 
     border-bottom: 1px dotted var(--results-border-color);
+
+    &:hover {
+      border-bottom-style: solid;
+    }
   }
 }
 

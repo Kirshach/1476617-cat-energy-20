@@ -10,13 +10,13 @@
   @include default-list-style;
 
   display: grid;
+  height: min-content;
 }
 
 
 ////////////////////////////////////
 //     Раскладка на планшете     ///
 ////////////////////////////////////
-
 
 @media (min-width: $tablet-width) {
   .catalog__page-heading {
@@ -27,10 +27,10 @@
 
   .catalog__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 8.5%;
-    grid-row-gap: calc(5% - 5em);
+    column-gap: 8.5%;
+    row-gap: 2.6em;
 
-    margin: 0 var(--page-padding);
+    margin: 0 var(--page-padding) 4.8em;
   }
 }
 
@@ -39,9 +39,16 @@
 //     Раскладка на десктопе     ///
 ////////////////////////////////////
 
-
 @media (min-width: $desktop-width) {
+  .catalog__page-heading {
+    margin: calc(3% + 0.11em) var(--page-padding) calc(3% + 0.71em);
+  }
+
   .catalog__list {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: calc(5% + 19px);
+    row-gap: 4.6em;
+
+    margin: 0 var(--page-padding) 5.6em;
   }
 }

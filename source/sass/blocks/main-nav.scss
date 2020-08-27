@@ -1,7 +1,6 @@
 // .main-nav {}
 
 .main-nav__wrapper {
-  @include uppercase-heading (20px, 125%);
   font-weight: 500;
 
   width: 100%;
@@ -12,6 +11,7 @@
     width: 100%;
     padding: 0.5em 1em;
     border-top: 1px solid var(--border-main-color);
+    transition: border-width 0.2s, border-color 0.2s;
 
     &:last-of-type {
       border-bottom: 1px solid var(--border-main-color);
@@ -53,8 +53,6 @@
     left: $link-sides-padding + $item-sides-padding;
 
     margin: 0;
-    font-size: 18px;
-    line-height: 24px;
     font-weight: normal;
 
     .site-list__item {
@@ -107,9 +105,6 @@
 
     position: relative;
     left: $link-sides-padding + $item-sides-padding;
-
-    font-size: 20px;
-    line-height: 30px;
 
     .site-list__link {
       padding: 0.3em $link-sides-padding;

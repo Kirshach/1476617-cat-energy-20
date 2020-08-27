@@ -3,6 +3,19 @@
 }
 
 .site-list__link {
+  @include accessible-focus;
+
   color: inherit;
   text-decoration: none;
+
+  transition: opacity 0.1s;
+
+  &:not(.site-list__link--current):hover {
+    opacity: 0.6;
+    transition: opacity 0.07s ease-out;
+  }
+
+  &:not(.site-list__link--current):active {
+    opacity: 0.3;
+  }
 }

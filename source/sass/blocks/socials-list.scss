@@ -8,6 +8,8 @@
 
   width: 100%;
   height: 100%;
+
+  @include accessible-focus(20px, -2px);
 }
 
 .socials-list__icon {

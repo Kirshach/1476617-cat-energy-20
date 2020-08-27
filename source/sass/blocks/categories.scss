@@ -86,7 +86,7 @@ $categories-internal-padding: calc(10% - 8px);
   text-decoration: none;
   color: var(--heading-main-color);
 
-  background: url("../img/icon-arrow.svg") no-repeat right center;
+  background: url("../img/bg-icon-arrow.svg") no-repeat right center;
 }
 
 ////////////////////////////////////
@@ -98,7 +98,7 @@ $categories-internal-padding: calc(10% - 8px);
   $categories-internal-padding: calc(20% - 36px);
 
   .categories__wrapper {
-    margin-bottom: calc(5% - 1.62em);
+    margin-bottom: calc(5% - 1.66em);
   }
 
   .categories__item {
@@ -154,11 +154,19 @@ $categories-internal-padding: calc(10% - 8px);
   }
 
   .categories__link {
+    @include accessible-focus(50px, 7px);
+
     max-width: 50%;
-    padding: 0 57px 0 0;
+    padding: 0 50px 0 0;
 
     font-size: 20px;
     line-height: 30px;
+
+    background-position: center right -7px;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -175,10 +183,11 @@ $categories-internal-padding: calc(10% - 8px);
     }
   }
 }
+
+
 ////////////////////////////////////
 //     Раскладка на десктопе     ///
 ////////////////////////////////////
-
 
 @media (min-width: $desktop-width) {
   $categories-internal-padding: calc(20% - 62px);
@@ -237,7 +246,8 @@ $categories-internal-padding: calc(10% - 8px);
   }
 
   .categories__link {
-    padding: 0 60px 0 $categories-internal-padding;
+    padding: 0 53px 0 0;
     margin-bottom: 2.95em;
+    margin-left: $categories-internal-padding;
   }
 }

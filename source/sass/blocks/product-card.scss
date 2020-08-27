@@ -71,6 +71,7 @@
 
   grid-column: 1 / -1;
 
+  height: min-content;
   padding: calc(2% + 0.27em) 1.5em;
   margin: 0 calc(15% - 2.62em);
 }
@@ -150,6 +151,7 @@
   }
 
   .product-card__heading {
+    width: auto;
     max-width: calc(50% + 60px);
     margin: 0 auto 5.3%;
 
@@ -229,5 +231,95 @@
   .product-card--show-all__order-button {
     height: min-content;
     margin: calc(1.1em - 5%) 11% 0;
+  }
+}
+
+
+////////////////////////////////////
+//     Раскладка на десктоп      ///
+////////////////////////////////////
+
+@media (min-width: $desktop-width) {
+  .product-card {
+    min-height: 0;
+    padding: calc(5% - 3em) 0 calc(7% + 1.5em);
+
+    background-image: linear-gradient(var(--bg-main-color) 15.6%, var(--bg-accented-main-color) 15.6%);
+  }
+
+  .product-card__img-container {
+    margin: 0 0 calc(5% + 2.13em);
+  }
+
+  .product-card__img {
+    position: relative;
+    left: 2px;
+
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .product-card__description {
+    padding: 0 calc(25% - 1.4em);
+    margin: 0 0 calc(7% + 0.95em);
+  }
+
+  .product-card__heading {
+    width: 100%;
+    margin: 0 auto 10.3%;
+
+    line-height: 105%;
+  }
+
+  .product-card__description-list {
+    font-size: 16px;
+  }
+
+  .product-card__description-item {
+    padding: 0.33em 0;
+    border-bottom: 1px solid var(--border-secondary-color);
+  }
+
+  .product-card__order-button {
+    height: min-content;
+    padding: calc(7% - 0.45em) 0;
+    margin: 0 15.7%;
+  }
+
+  //
+  // Раскладка карточки "Показать все"
+  //
+
+  .product-card--show-all {
+    grid-template-rows: 25.4% 45% 29.6%;
+    padding: calc(50% + 2.55em) 0 0;
+    margin-top: calc(15% + 44px);
+
+    background: transparent;
+  }
+
+  .product-card--show-all__heading {
+    max-width: 8em;
+    height: min-content;
+    margin: 0 auto 0;
+
+    line-height: 110%;
+    text-align: center;
+  }
+
+  .product-card--show-all__description {
+    grid-column: 1 / -1;
+
+    max-width: 12em;
+    padding: 0;
+    margin: 0 auto;
+
+    line-height: 110%;
+    text-align: center;
+  }
+
+  .product-card--show-all__order-button {
+    height: min-content;
+    margin: calc(0.92em - 5%) 15% 0;
   }
 }

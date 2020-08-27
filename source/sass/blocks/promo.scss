@@ -82,7 +82,7 @@
     // Отступ сверху тянется, но не меньше 2.25em
     --padding-top: max(calc(12% - 4.3em), 2.25em);
 
-    padding: var(--padding-top) 15.2% calc(655px - 17%);
+    padding: var(--padding-top) 15.2% calc(657px - 17%);
     margin-bottom: 0;
 
     background: transparent;
@@ -119,7 +119,7 @@
 
   .promo__img {
     position: absolute;
-    bottom: -4.5%;
+    bottom: -4.4%;
     right: calc(10% - 47px);
     z-index: -1;
 

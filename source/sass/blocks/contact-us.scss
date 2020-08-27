@@ -1,5 +1,3 @@
-// .contact-us {}
-
 .contact-us__wrapper {
   position: relative;
   outline-offset: -2px;
@@ -43,13 +41,25 @@
   margin: 0;
 }
 
-// .contact-us__mini-map-container {}
+.contact-us__mini-map-container {
+  position: relative;
 
-.contact-us__mini-map {
-  display: block;
+  height: 0;
+  padding: calc(20% + 117px) 0;
+
+  overflow: hidden;
 }
 
-// .contact-us__open-map {}
+.contact-us__mini-map {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  border: none;
+}
 
 
 ////////////////////////////////////
@@ -62,7 +72,7 @@
     top: 2px;
     left: 1px;
 
-    padding: 6% calc(var(--page-padding) + 2.87em);
+    padding: 6% calc(var(--page-padding) + 2.85em);
   }
 
   .contact-us__heading {
@@ -81,8 +91,9 @@
     margin-bottom: 1.25em;
   }
 
-  .contact-us__mini-map {
+  .contact-us__mini-map-container {
     height: 400px;
+    padding: 0;
   }
 }
 
@@ -91,32 +102,26 @@
 //     Раскладка на десктопе     ///
 ////////////////////////////////////
 
-
-@media (min-width: $desktop-width - 320px) {
+@media (min-width: $desktop-width - 220px) {
   .contact-us__header {
     position: absolute;
-    top: 25%;
-    left: 8%;
+    z-index: 2;
+    top: 23.6%;
+    left: 7.6%;
 
-    width: 39.5%;
-    padding: 3em 4.7em;
+    width: calc(14% + 26.3em);
+    padding: 3.4em 6.1em 3.1em 5.5em;
 
-    outline: 2px solid red;
+    background-color: var(--bg-main-color);
   }
 
   .contact-us__heading {
     width: max-content;
-    outline: 2px solid rgba(blue, 0.3);
     outline-offset: 2px;
   }
 
   .contact-us__address {
     width: max-content;
-    outline: 2px solid rgba(green, 0.3);
     text-align: left;
-  }
-
-  .contact-us__mini-map {
-    height: 400px;
   }
 }
