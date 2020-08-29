@@ -739,6 +739,7 @@
 
   .pick-your-diet__item--contacts {
     width: 46.58%;
+    margin: 0;
 
     &:nth-of-type(2n-1) {
       margin-right: 6.38%;
@@ -752,10 +753,6 @@
 
   .pick-your-diet__legend--contacts {
     margin: 0 0 calc(5% + 0.4em);
-  }
-
-  .pick-your-diet__item--contacts {
-    margin: 0;
   }
 
   .pick-your-diet__label--contacts {
