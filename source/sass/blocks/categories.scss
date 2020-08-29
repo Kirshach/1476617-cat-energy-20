@@ -77,8 +77,9 @@ $categories-internal-padding: calc(10% - 8px);
 .categories__link {
   @include uppercase-heading(16px);
   display: block;
-  width: max-content;
+  position: relative;
 
+  width: max-content;
   padding: 0 2.95em 0 $categories-internal-padding;
   margin: 0 0 1.37em;
 
@@ -86,7 +87,43 @@ $categories-internal-padding: calc(10% - 8px);
   text-decoration: none;
   color: var(--heading-main-color);
 
-  background: url("../img/bg-icon-arrow.svg") no-repeat right center;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: var(--heading-main-color);
+    transition: all 0.1s;
+  }
+
+  &::before {
+    top: calc(50% - 1px);
+    right: 14px;
+    width: 18px;
+    height: 2px;
+  }
+
+  &::after {
+    top: calc(50% - 4px);
+    right: 10px;
+    width: 8px;
+    height: 8px;
+
+    transform: rotate(135deg);
+    clip-path: polygon(0% 0%, 100% 12%, 12% 100%);
+  }
+
+  &:hover::before {
+    right: 6px;
+    width: 26px;
+  }
+
+  &:hover::after {
+    right: 2px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 ////////////////////////////////////
@@ -163,10 +200,6 @@ $categories-internal-padding: calc(10% - 8px);
     line-height: 30px;
 
     background-position: center right -7px;
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 }
 

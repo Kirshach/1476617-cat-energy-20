@@ -10,6 +10,12 @@
   color: var(--heading-main-color);
 }
 
+.section-heading--catalog {
+  padding: calc(3% + 0.48em) var(--page-padding) calc(3% + 0.86em);
+  margin: 0;
+  border-bottom: 1px solid var(--product-card-border);
+}
+
 .section-heading--second-level {
   display: inline-block;
   position: relative;
@@ -48,6 +54,12 @@
     font-size: 60px;
   }
 
+  .section-heading--catalog {
+    padding: 0;
+    margin: calc(3% + 0.18em) var(--page-padding) calc(3% + 0.62em);
+    border: none;
+  }
+
   .section-heading--second-level {
     padding: 0;
     margin-left: -0.06em;
@@ -70,6 +82,10 @@
 ////////////////////////////////////
 
 @media (min-width: $desktop-width - 100px) {
+  .section-heading--catalog {
+    margin: calc(3% + 0.11em) var(--page-padding) calc(3% + 0.71em);
+  }
+
   .section-heading--second-level {
     margin-left: 0;
   }

@@ -39,7 +39,7 @@
   margin-right: 0.9em;
 }
 
-.pick-your-diet__label--sup {
+.pick-your-diet__sup-label {
   position: relative;
   top: 0.3em;
 }
@@ -732,13 +732,18 @@
   //
 
   .pick-your-diet__fieldset--contacts {
-    display: grid;
-    grid-template-columns: 46.58% 46.8%;
-    column-gap: 6.4%;
+    display: flex;
 
     margin-bottom: calc(5% - 3.62em);
   }
 
+  .pick-your-diet__item--contacts {
+    width: 46.58%;
+
+    &:nth-of-type(2n-1) {
+      margin-right: 6.38%;
+    }
+  }
 
   .pick-your-diet__text-input--email,
   .pick-your-diet__text-input--phone {
