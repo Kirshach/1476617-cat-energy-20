@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body page-body--main-page">
     <header class="page-header">
       <div class="page-header__wrapper page-header__main-page-wrapper">
         <div class="page-header__header-top">
-          <a class="page-header__mascot-link">
+          <a class="page-header__mascot-link" aria-label="Кэт Энерджи: магазин кормов для вашего любимца">
             <svg class="page-header__mascot-icon mascot-icon" width="71" height="59" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="mascot-icon__tablet-bg" d="M59.9 23.8A25.4 25.4 0 0039.6 8.4 25.8 25.8 0 0016 18a25.3 25.3 0 0016.5 40.7c-.6-2-1.2-4.3-1.7-6.8 1.5 1 3.1 1.8 4.8 2.6l.3 4.5c1.7 0 3.5-.1 5.3-.5v-.7c.3-1.9 1-5.2 1.2-7.4 1.2-1 2.2-2.3 3-3.7l-.1.5c-.6 4.2-1.7 8.7-2.4 10l-.8 1.1a25.7 25.7 0 0019.7-23.7c.2-3.7-.5-7.4-2-10.8zm-1.5 3.8c-.4.4-1.3.7-1.5-.6a34 34 0 01-.2-2.2s-2-3.4-2.6-3.4c-.7 0-5.9 3.4-7.2 5-1.2 1.2-1.4 1.1-1.4 3.4 0 1.7.2 8 0 13l-8 2.1c-2.6.7-5.2 1.3-7.9 1.7l-1-5.8h-.1l-2.6-13s-3.8-1.5-5.2-1.8a3.8 3.8 0 00-4 .6 5 5 0 00-1.7 3.8l.5 1.4c0 .5-1.2.5-2 .5s-1-1.5-.3-3.1a22.5 22.5 0 013.9-6.6s.1-.4 1.2-.3l7.3.5v-2.3A144 144 0 0146 19.2V21c2.6-1.2 5.3-1.8 8.1-2a1 1 0 01.8.4l2.7 3.4 1.8 3-.9 1.8z" fill="#FDC305"/>
               <path class="mascot-icon__mobile-bg" d="M6 20.7v-2.2c6.8-1 13.5-1.4 20.2-1.4V19c1.9-.8 4-1.4 6-1.8a16.7 16.7 0 00-32 3.3l5.9.3zM27.2 24.2c-1.1 1.3-1.3 1.2-1.3 3.5v9.2a16.6 16.6 0 007.1-17c-2 1.2-4 2.7-5.8 4.3zM6.4 25.7L1.2 24 0 23.6a16.6 16.6 0 008.7 14L6.4 25.7z" fill="#FDC305"/>
@@ -19,7 +21,7 @@
               <g class="mascot-icon__desktop-add-up" fill="#FDC305"><path d="M65.2 3.5l-8.4 9.3-1.3-2L63.7 0l1.5 3.5zM62.7 17.1l5.5-4-.8-3.8-5.4 4.8.7 3zM60 49l6 3.1 3-2.3-6.6-2.7-2.5 1.9zM2 6l3-3.4 9.3 9-1.2 2.2L1.9 5.9zM7.4 16.1l-4.7-3-2.4 3.8 5.1 2.4 2-3.2zM14 52.1l-4.6 3.3 2.8 3.6 4-4-2.3-2.9z"/></g>
             </svg>
           </a>
-          <a class="page-header__site-logo" tabindex="-1">
+          <a class="page-header__site-logo" tabindex="-1" aria-hidden="true">
             <img class="page-header__logo-img" src="img/site-logo.svg" height="18" width="101" alt="Cat Energy">
           </a>
           <button class="page-header__hamburger-toggler hamburger-toggler" type="button" aria-label="Открыть меню">
@@ -57,12 +59,12 @@
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <a class="promo__link button" href="form.html">Подобрать программу</a>
           <picture>
-            <source media="(min-width: 1280px)" type="image/webp" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x" sizes="552px">
-            <source media="(min-width: 1280px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x" sizes="552px">
-            <source media="(min-width: 600px)" type="image/webp" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x" sizes="709px">
-            <source media="(min-width: 600px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x" sizes="709px">
-            <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x" sizes="280px">
-            <img class="promo__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"  sizes="280px" alt="Упаковка Cat Energy Pro с вкусом курицы">
+            <source media="(min-width: 1280px)" type="image/webp" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source media="(min-width: 1280px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 600px)" type="image/webp" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source media="(min-width: 600px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+            <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+            <img class="promo__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Упаковка Cat Energy Pro с вкусом курицы">
           </picture>
         </div>
       </section>
@@ -166,16 +168,16 @@
             </figcaption>
             <div class="results-example__img-container">
               <picture>
-                <source media="(min-width: 680px)" type="image/webp" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x" sizes="690px">
-                <source media="(min-width: 680px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x" sizes="690px">
-                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x" sizes="320px">
-                <img class="results-example__img results-example__img--before results-example__img--current" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" sizes="320px" alt="Кот до Cat Energy: толстый, но солидный">
+                <source media="(min-width: 680px)" type="image/webp" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source media="(min-width: 680px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <img class="results-example__img results-example__img--before results-example__img--current" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Кот до Cat Energy: толстый, но солидный">
               </picture>
               <picture>
-                <source media="(min-width: 680px)" type="image/webp" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x" sizes="690px">
-                <source media="(min-width: 680px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x" sizes="690px">
+                <source media="(min-width: 680px)" type="image/webp" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                <source media="(min-width: 680px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
                 <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
-                <img class="results-example__img results-example__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" sizes="320px" alt="Кот после Cat Energy: стройный, но страшненький">
+                <img class="results-example__img results-example__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Кот после Cat Energy: стройный, но страшненький">
               </picture>
               </div>
           </figure>
@@ -232,7 +234,7 @@
         </div>
         <div class="page-footer__copyright-container">
           <a class="page-footer__copyright-name no-wrap" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive" tabindex="-1">
+          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive" tabindex="-1" aria-hidden="true">
             <svg width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <use href="img/sprite.svg#icon-html-academy"/>
             </svg>

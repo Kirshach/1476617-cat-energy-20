@@ -1,5 +1,6 @@
 "use strict"
 
+// Глобальные скрипты
 let emptyLinks = document.querySelectorAll('a[href="#"]');
 if (emptyLinks.length !== 0) {
   for (let link of emptyLinks) {
@@ -7,8 +8,21 @@ if (emptyLinks.length !== 0) {
       event.preventDefault();
     }
   }
-}
+};
 
+// Шапка
+let headerToggler = document.querySelector(".page-header__hamburger-toggler");
+if (headerToggler) {
+  let headerMainNav = document.querySelector(".page-header__main-nav");
+  headerToggler.classList.add("page-header__hamburger-toggler--js-on", "page-header__hamburger-toggler--closed");
+  headerMainNav.classList.add("page-header__main-nav--closed");
+  headerToggler.onclick = function() {
+    headerToggler.classList.toggle("page-header__hamburger-toggler--closed");
+    headerMainNav.classList.toggle("page-header__main-nav--closed");
+  };
+};
+
+// Блок .contact-us
 let map;
 let mapMarker;
 
@@ -30,7 +44,7 @@ function initMap() {
     initCenter = { lat: 59.938950, lng: 30.323071 };
   };
 
-  map = new google.maps.Map(document.querySelector('.contact-us__mini-map'), {
+  map = new google.maps.Map(document.querySelector(".contact-us__mini-map"), {
     zoom: initZoom,
     center: initCenter,
     disableDefaultUI: true,
@@ -43,7 +57,7 @@ function initMap() {
     draggarble: false,
   });
 
-  google.maps.event.addDomListener(window, 'resize', function() {
+  google.maps.event.addDomListener(window, "resize", function() {
     if (window.matchMedia("(max-width: 679px)").matches) {
       map.setZoom(14.3);
       map.setCenter({ lat: 59.938354, lng: 30.323010 });
@@ -64,8 +78,9 @@ function initMap() {
       mapMarker.icon.scaledSize = new google.maps.Size(114, 106);
     }
   });
-}
+};
 
+// Полифилл focus-visible
 /**
  * Applies the :focus-visible polyfill at the given scope.
  * A scope in this case is either the top-level Document or a Shadow Root.
@@ -370,17 +385,3 @@ if (typeof document !== 'undefined') {
   // coordination is required to use the polyfill in the top-level document:
   applyFocusVisiblePolyfill(document);
 }
-
-let headerToggler = document.querySelector('.page-header__hamburger-toggler');
-if (headerToggler) {
-  let headerTogglerTop = document.querySelector('.hamburger-toggler__top-bar');
-  let headerTogglerMiddle = document.querySelector('.hamburger-toggler__middle-bar');
-  let headerTogglerBottom = document.querySelector('.hamburger-toggler__bottom-bar');
-  let headerMainNav = document.querySelector('.page-header__main-nav');
-  headerToggler.classList.add('page-header__hamburger-toggler--js-on', 'page-header__hamburger-toggler--closed');
-  headerMainNav.classList.add('page-header__main-nav--closed');
-  headerToggler.onclick = function() {
-    headerToggler.classList.toggle('page-header__hamburger-toggler--closed');
-    headerMainNav.classList.toggle('page-header__main-nav--closed');
-  };
-};

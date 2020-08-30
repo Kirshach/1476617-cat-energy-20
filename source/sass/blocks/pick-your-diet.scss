@@ -57,6 +57,11 @@
 
   transition: outline-color 0.1s ease-out, outline-offset 0.1s ease-in;
 
+  &::placeholder {
+    opacity: 1;
+    color: var(--text-main-color);
+  }
+
   &:hover {
     border-color: var(--border-secondary-color);
   }
@@ -66,16 +71,26 @@
   }
 
   &:invalid {
-    border-color: var(--error-color);
+    border-color: transparent;
+    outline: 2px solid var(--error-color);
+    outline-offset: 0;
+
+    &:focus {
+      outline-color: var(--error-color);
+    }
+  }
+
+  &[value="g"] {
+    outline-color: green;
   }
 }
 
 .pick-your-diet__text-input,
 .pick-your-diet__textarea,
-.pick-your-diet__item--radio-input,
-.pick-your-diet__item--checkbox,
+// .pick-your-diet__item--radio-input, // ???
+// .pick-your-diet__item--checkbox, // ???
 .pick-your-diet__submit-button {
-  outline: 1px solid transparent;
+  outline: 2px solid transparent;
   transition: outline-color 0.1s ease-out, outline-offset 0.1s ease-in;
 
   &:focus-within {
@@ -263,7 +278,7 @@
   border: 1px solid var(--border-main-color);
   resize: none;
 
-  outline: 1px solid transparent;
+  outline: 2px solid transparent;
   outline-offset: 15px;
 
   &::placeholder {
@@ -289,12 +304,18 @@
 }
 
 .pick-your-diet__item--extra {
+  max-width: 80vw;
   padding: 0.3em 0 0.4em;
   margin-bottom: calc(3% + 0.46em);
 
   &:last-of-type {
     margin-bottom: 0;
   }
+}
+
+.pick-your-diet__label--extra {
+  max-width: 100%;
+  word-break: normal;
 }
 
 .pick-your-diet__item--checkbox {
@@ -578,11 +599,16 @@
 
   .pick-your-diet__item--extra {
     margin: 0;
+    max-width: 35vw;
 
     &:last-of-type {
       margin-bottom: 0;
     }
   }
+
+  // .pick-your-diet__item--extra {
+  //   max-width: 20vw;
+  // }
 
   .pick-your-diet__item--checkbox {
     outline-offset: 20px;
@@ -602,7 +628,7 @@
       }
 
       &::after {
-        top: 0;
+        top: calc(50% - 15px);
         left: 4px;
         transform: translateY(-20px);
         transition: all 0.06s ease-in;
@@ -732,17 +758,21 @@
   //
 
   .pick-your-diet__fieldset--contacts {
-    display: flex;
+    margin-bottom: calc(5% - 5.65em);
+  }
 
-    margin-bottom: calc(5% - 3.62em);
+  .pick-your-diet__contacts-container {
+    display: grid;
+    grid-template-columns: 46.58% 46.7%;
+    column-gap: 6.38%;
   }
 
   .pick-your-diet__item--contacts {
-    width: 46.58%;
-    margin: 0;
+    width: 100%;
+    margin-bottom: 5%;
 
-    &:nth-of-type(2n-1) {
-      margin-right: 6.38%;
+    &:last-of-type {
+      margin-bottom: 2.5%;
     }
   }
 
@@ -757,6 +787,10 @@
 
   .pick-your-diet__label--contacts {
     margin-right: 1.05em;
+  }
+
+  .pick-your-diet__label--phone {
+    margin-right: 0.9em;
   }
 
   //
@@ -785,9 +819,17 @@
     margin-bottom: calc(5% - 0.03em);
   }
 
+  .pick-your-diet__item--extra {
+    max-width: 20vw;
+  }
+
   .pick-your-diet__legend--extra {
     margin-bottom: calc(5% - 0.12em);
   }
+
+  //
+  // Поле отправки формы
+  //
 
   .pick-your-diet__submit-container {
     grid-template-columns: 1fr 1fr;
