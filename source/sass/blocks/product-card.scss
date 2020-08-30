@@ -82,6 +82,8 @@
 //
 
 .product-card--show-all {
+  order: 1;
+
   position: relative;
   padding: calc(15% + 2.2em) var(--page-padding) calc(5% + 1.28em);
 
@@ -290,7 +292,7 @@
   //
 
   .product-card--show-all {
-    grid-template-rows: 25.4% 45% 29.6%;
+    grid-template-rows: 68px 119px 81px;
     padding: calc(50% + 2.55em) 0 0;
     margin-top: calc(15% + 44px);
 
