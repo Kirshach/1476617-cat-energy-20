@@ -57,11 +57,6 @@
 
   transition: outline-color 0.1s ease-out, outline-offset 0.1s ease-in;
 
-  &::placeholder {
-    opacity: 1;
-    color: var(--text-main-color);
-  }
-
   &:focus::placeholder {
     opacity: 0;
   }
