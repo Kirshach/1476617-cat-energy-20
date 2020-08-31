@@ -70,14 +70,10 @@
     outline-offset: 0;
   }
 
-  &:invalid {
+  &:invalid:focus {
     border-color: transparent;
     outline: 2px solid var(--error-color);
     outline-offset: 0;
-
-    &:focus {
-      outline-color: var(--error-color);
-    }
   }
 
   &[value="g"] {
