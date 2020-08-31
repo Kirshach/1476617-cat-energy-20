@@ -62,6 +62,10 @@
     color: var(--text-main-color);
   }
 
+  &:focus::placeholder {
+    opacity: 0;
+  }
+
   &:hover {
     border-color: var(--border-secondary-color);
   }
@@ -252,8 +256,8 @@
   filter: invert(67%) sepia(12%) saturate(2274%) hue-rotate(54deg) brightness(92%) contrast(89%);
 }
 
-.pick-your-diet__text-input--email:invalid + .pick-your-diet__email-icon,
-.pick-your-diet__text-input--phone:invalid + .pick-your-diet__phone-icon {
+.pick-your-diet__text-input--email:invalid:focus + .pick-your-diet__email-icon,
+.pick-your-diet__text-input--phone:invalid:focus + .pick-your-diet__phone-icon {
   filter: invert(74%) sepia(16%) saturate(3010%) hue-rotate(307deg) brightness(101%) contrast(93%);
 }
 
@@ -768,7 +772,7 @@
     margin-bottom: 5%;
 
     &:last-of-type {
-      margin-bottom: 2.5%;
+      margin-bottom: 5%;
     }
   }
 

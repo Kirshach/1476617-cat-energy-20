@@ -987,16 +987,18 @@
   .pick-your-diet__text-input::placeholder {
     opacity: 1;
     color: var(--text-main-color); }
+  .pick-your-diet__text-input:focus::-moz-placeholder {
+    opacity: 0; }
+  .pick-your-diet__text-input:focus::placeholder {
+    opacity: 0; }
   .pick-your-diet__text-input:hover {
     border-color: var(--border-secondary-color); }
   .pick-your-diet__text-input:focus {
     outline-offset: 0; }
-  .pick-your-diet__text-input:invalid {
+  .pick-your-diet__text-input:invalid:focus {
     border-color: transparent;
     outline: 2px solid var(--error-color);
     outline-offset: 0; }
-    .pick-your-diet__text-input:invalid:focus {
-      outline-color: var(--error-color); }
   .pick-your-diet__text-input[value="g"] {
     outline-color: green; }
 
@@ -1123,8 +1125,8 @@
   -webkit-filter: invert(67%) sepia(12%) saturate(2274%) hue-rotate(54deg) brightness(92%) contrast(89%);
           filter: invert(67%) sepia(12%) saturate(2274%) hue-rotate(54deg) brightness(92%) contrast(89%); }
 
-.pick-your-diet__text-input--email:invalid + .pick-your-diet__email-icon,
-.pick-your-diet__text-input--phone:invalid + .pick-your-diet__phone-icon {
+.pick-your-diet__text-input--email:invalid:focus + .pick-your-diet__email-icon,
+.pick-your-diet__text-input--phone:invalid:focus + .pick-your-diet__phone-icon {
   -webkit-filter: invert(74%) sepia(16%) saturate(3010%) hue-rotate(307deg) brightness(101%) contrast(93%);
           filter: invert(74%) sepia(16%) saturate(3010%) hue-rotate(307deg) brightness(101%) contrast(93%); }
 
@@ -1425,7 +1427,7 @@
     width: 100%;
     margin-bottom: 5%; }
     .pick-your-diet__item--contacts:last-of-type {
-      margin-bottom: 2.5%; }
+      margin-bottom: 5%; }
   .pick-your-diet__text-input--email,
   .pick-your-diet__text-input--phone {
     height: auto; }
